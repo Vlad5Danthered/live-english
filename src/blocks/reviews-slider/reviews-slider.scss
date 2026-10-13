@@ -56,6 +56,8 @@
   }
 
   &__inner {
+    position: relative;
+    overflow: hidden;
     @include col(xs, 12);
     @include col-offset(md, 2);
     @include col(md, 8);

@@ -1,4 +1,4 @@
-(function(){
+/*(function(){
   const utils = window.fizzyUIUtils;
   //console.log(utils);
   const container = document.querySelector('.reviews-slider');
@@ -47,4 +47,37 @@
     flkty.next();
   });
 
+}());*/
+
+(function(){
+  const container = document.querySelector('.reviews-slider');
+  if (!container) { return; }
+
+  const elem = container.querySelector('.reviews-slider__inner');
+
+  const swiper = new Swiper(elem, {
+    /*effect: 'fade',
+    fadeEffect: {
+      crossFade: true // Плавное исчезновение предыдущего слайда
+    },*/
+    //autoHeight: true, // Аналог adaptiveHeight: true
+    threshold: 30,    // Аналог dragThreshold: 30
+    spaceBetween: 24, // Межслайдовый отступ
+    slidesPerView: '1',
+
+    navigation: {
+      nextEl: container.querySelector('.slider-nav__btn--next'),
+      prevEl: container.querySelector('.slider-nav__btn--prev'),
+    },
+
+    pagination: {
+      el: container.querySelector('.slider-nav__pagination'),
+      clickable: true,
+      bulletClass: 'button slider-nav__dot',
+      bulletActiveClass: 'is-selected',
+      renderBullet: function (index, className) {
+        return `<button class="${className}"><span class="visually-hidden">Slide ${index + 1}</span></button>`;
+      }
+    }
+  });
 }());

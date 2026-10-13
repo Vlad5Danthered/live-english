@@ -33,6 +33,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 32px;
+    width: auto !important;
 
     @media(max-width:400px) {
       & {

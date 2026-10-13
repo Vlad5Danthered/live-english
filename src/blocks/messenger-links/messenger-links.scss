@@ -48,6 +48,11 @@
       }*/
     }
 
+    @media (min-width: $screen-xl) {
+      width: 40px;
+      height: 40px;
+    }
+
     &--viber {
       background-color: rgba($color-viber, 0.08);
       color: $color-viber !important;

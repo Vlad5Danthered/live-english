@@ -6,48 +6,52 @@
   <p class="h2 reviews-slider__title">What our Students are Saying</p>
   <h2 class="visually-hidden">Отзывы студентов об обучении</h2>
   <div class="row">
-    <div class="reviews-slider__inner">
+    <div class="reviews-slider__inner swiper">
 
-      <article class="carousel-cell  review-card">
-        <h3 class="visually-hidden">Отзыв пользователя Katerina Paereli</h3>
-        <div class="row">
+      <div class="swiper-wrapper">
 
-          <div class="review-card__img-col">
-            <figure class="review-card__figure">
-              <div class="embed-responsive  embed-responsive--4-3  review-card__img">
-                <picture class="carousel-cell-image">
-                  <source data-flickity-lazyload-srcset="img/portret.webp" media="(min-width: 1280px)" type="image/webp">
-                  <source data-flickity-lazyload-srcset="img/portret.jpg" media="(min-width: 1280px)">
-                    <!-- 384x288  десктоп -->
-                  <source data-flickity-lazyload-srcset="img/portret.webp" media="(min-width: 320px)" type="image/webp">
-                  <source data-flickity-lazyload-srcset="img/portret.jpg" media="(min-width: 320px)">
-                    <!-- 92x69  мобила-планшет -->
-                  <source data-flickity-lazyload-srcset="img/portret.webp" type="image/webp">
-                  <img data-flickity-lazyload-src="img/portret.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="420" height="315">
-                </picture>
-              </div>
-              <figcaption class="h5  review-card__fig-caption">Katerina Paereli <span>Head of Marketing</span></figcaption>
-            </figure>
-          </div>
+        <article class="review-card swiper-slide">
+          <h3 class="visually-hidden">Отзыв пользователя Katerina Paereli</h3>
+          <div class="row">
 
-          <div class="review-card__text-col">
-            <div class="review-card__text">
-              <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
-              <p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>
-              <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
+            <div class="review-card__img-col">
+              <figure class="review-card__figure">
+                <div class="embed-responsive  embed-responsive--4-3  review-card__img">
+                  <picture>
+                    <source srcset="img/portret.webp" media="(min-width: 1280px)" type="image/webp">
+                    <source srcset="img/portret.jpg" media="(min-width: 1280px)">
+                      <!-- 384x288  десктоп -->
+                    <source srcset="img/portret.webp" media="(min-width: 320px)" type="image/webp">
+                    <source srcset="img/portret.jpg" media="(min-width: 320px)">
+                      <!-- 92x69  мобила-планшет -->
+                    <source srcset="img/portret.webp" type="image/webp">
+                    <img src="img/portret.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="420" height="315" loading="lazy">
+                  </picture>
+                </div>
+                <figcaption class="h5  review-card__fig-caption">Katerina Paereli <span>Head of Marketing</span></figcaption>
+              </figure>
             </div>
+
+            <div class="review-card__text-col">
+              <div class="review-card__text">
+                <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
+                <p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>
+                <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
+              </div>
+            </div>
+
           </div>
+        </article>
 
-        </div>
-      </article>
+        @@include('../../blocks/review-card/review-card.html', {
+          "suffix": "-1-3"
+        })
 
-      @@include('../../blocks/review-card/review-card.html', {
-        "suffix": "-1-3"
-      })
+        @@include('../../blocks/review-card/review-card.html', {
+          "suffix": "-2-3"
+        })
 
-      @@include('../../blocks/review-card/review-card.html', {
-        "suffix": "-2-3"
-      })
+      </div>
 
     </div>
   </div>
