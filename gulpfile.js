@@ -75,7 +75,7 @@ gulp.task('clean', function () {
 
 // Компиляция стилей блоков проекта (и добавочных)
 gulp.task('style', function () {
-  const sass = require('gulp-sass')(require('node-sass'));
+  const sass = require("gulp-sass")(require("sass"));
   const sourcemaps = require('gulp-sourcemaps');
   const wait = require('gulp-wait');
   console.log('---------- Компиляция стилей');
@@ -97,12 +97,12 @@ gulp.task('style', function () {
     .pipe(gulpIf(isDev,
       postcss(discardComments)
     ))
-    .pipe(gulpIf(!isDev,
+    /*.pipe(gulpIf(!isDev,
       csso({
         restructure: false,
       })
-    ))
-    .pipe(rename('style.min.css'))
+    ))*/
+    .pipe(rename('style.css'))
     .pipe(gulpIf(isDev, sourcemaps.write('/')))
     .pipe(size({
       title: 'Размер',
@@ -116,7 +116,7 @@ gulp.task('style', function () {
 // Компиляция отдельных файлов
 gulp.task('style:single', function (callback) {
   if(projectConfig.singleCompiled.length) {
-    const sass = require('gulp-sass')(require('node-sass'));
+    const sass = require('gulp-sass')(require('sass'));
     const sourcemaps = require('gulp-sourcemaps');
     const wait = require('gulp-wait');
     console.log('---------- Компиляция добавочных стилей');
@@ -135,11 +135,11 @@ gulp.task('style:single', function (callback) {
       .pipe(debug({title: "Single style:"}))
       .pipe(sass())
       .pipe(postcss(postCssPlugins))
-      .pipe(gulpIf(!isDev,
+      /*.pipe(gulpIf(!isDev,
         csso({
           restructure: false,
         })
-      ))
+      ))*/
       .pipe(gulpIf(isDev, sourcemaps.write('/')))
       .pipe(size({
         title: 'Размер',
@@ -159,9 +159,9 @@ gulp.task('copy:css', function(callback) {
   if(projectConfig.copiedCss.length) {
     return gulp.src(projectConfig.copiedCss)
       .pipe(postcss(postCssPlugins))
-      .pipe(csso({
+      /*.pipe(csso({
         restructure: false,
-      }))
+      }))*/
       .pipe(size({
         title: 'Размер',
         showFiles: true,
@@ -419,8 +419,8 @@ gulp.task('js', function (callback) {
         }
       }))
       .pipe(babel())
-      .pipe(concat('script.min.js'))
-      .pipe(gulpIf(!isDev, uglify().on('error', function(e){console.log(e);})))
+      .pipe(concat('script.js'))
+      //.pipe(gulpIf(!isDev, uglify().on('error', function(e){console.log(e);})))
       .pipe(size({
         title: 'Размер',
         showFiles: true,

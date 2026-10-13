@@ -6,7 +6,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 15.21px 24px;
+  padding: 15px 24px;
   font-size: $font-size;
   font-weight: 600;
   font-family: inherit;
@@ -16,7 +16,7 @@
   text-transform: none;
   white-space: nowrap;
   color: $white;
-  border-radius: $border-radius-lg;
+  border-radius: $border-radius-m;
   border: none;
   background-color: $main-color;
   user-select: none;
@@ -71,6 +71,13 @@
       color: $secondary-color--active;
       background-color: rgba(227, 55, 58, 0.24);
       pointer-events: none;
+    }
+  }
+
+  @media (max-width:360px) {
+    & {
+      font-size: 14px;
+      padding: 15.21px 19px;
     }
   }
 }

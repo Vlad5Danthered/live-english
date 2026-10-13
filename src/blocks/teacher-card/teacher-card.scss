@@ -6,13 +6,19 @@
   padding: 24px 16px;
   background-color: $body-bg;
   border: 1px solid $border-color;
-  border-radius: $border-radius-lg;
+  border-radius: $border-radius-m;
+  transition: box-shadow 0.3s ease;
 
   @media (min-width: $screen-xl) {
     flex-wrap: nowrap;
   }
 
   $block-name:                &; // #{$block-name}__element
+
+  &:hover {
+    text-decoration:none;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+  }
 
   &__photo {
     flex: 0 0 128px;

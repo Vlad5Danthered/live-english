@@ -1,11 +1,12 @@
-.lang-switcher {
-  margin-left: 48px;
+.lang-inline {
 
   $block-name:                &; // #{$block-name}__element
 
   &__list {
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 24px 0 16px;
   }
 
   &__item {
@@ -23,8 +24,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     font-weight: 600;
     text-decoration: none !important;
     color: inherit;
@@ -32,6 +33,115 @@
     &:hover,
     &:focus {
       color: $secondary-color--active;
+    }
+  }
+}
+
+.lang-switcher {
+
+  $block-name:                &; // #{$block-name}__element
+  $toggle-height:             34px;
+
+  position: relative;
+  margin-left: 48px;
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2; // над списком
+    height: $toggle-height + 2;
+    padding: 0 5px 0 8px;
+    gap: 4px;
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: inherit;
+    background-color: $white;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: border-color $transition-time;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $grey-2;
+    }
+  }
+
+  &__icon {
+    // margin-left: 8px;
+    flex-shrink: 0;
+    transition: transform $transition-time;
+  }
+
+  &__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: ($toggle-height - 1px) 0 4px; // место под кнопку
+    background-color: $white;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity $transition-time, visibility $transition-time;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: $toggle-height;
+    // padding: 0 12px;
+    padding: 0 5px 0 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    color: inherit;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 20px;
+      border-radius: 2px;
+      background-color: $secondary-color;
+      opacity: 0;
+      transition: opacity $transition-time;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: inherit;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  // Открытое состояние
+  &.is-open {
+
+    #{$block-name}__toggle {
+      border-color: transparent;
+      background-color: transparent;
+    }
+
+    #{$block-name}__icon {
+      transform: rotate(180deg);
+    }
+
+    #{$block-name}__list {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }

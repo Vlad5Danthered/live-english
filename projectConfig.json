@@ -64,12 +64,15 @@
   "addCssBefore": [
     "./src/scss/variables.scss",
     "./src/scss/mixins.scss",
-    "../../node_modules/flickity/dist/flickity.min.css"
+    "../../node_modules/flickity/dist/flickity.min.css",
+    "../../node_modules/swiper/swiper.min.css",
+    "../../node_modules/swiper/modules/navigation.min.css",
+    "../../node_modules/swiper/modules/pagination.min.css"
   ],
   "addCssAfter": [
     "./src/scss/print.scss"
   ],
-  "singleCompiled": [],
+  "singleCompiled": [], 
   "addJsBefore": [
     "./node_modules/focus-visible/dist/focus-visible.min.js",
     "./node_modules/blazy/blazy.min.js",
@@ -78,7 +81,8 @@
     "./node_modules/sticky-js/dist/sticky.min.js",
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/object-fit-images/dist/ofi.js",
-    "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+    "./node_modules/swiper/swiper-bundle.min.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

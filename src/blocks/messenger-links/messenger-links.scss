@@ -1,52 +1,83 @@
 .messenger-links {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
 
   $block-name:                &; // #{$block-name}__element
+
+  @media (max-width: $screen-md - 1) {
+    .page-footer__socials-col & {
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
 
   &__item {
     display: flex;
 
-    & + & {
-      margin-left: 24px;
+    /*@media (min-width: $screen-md) {
+      & + & {
+        margin-left: 24px;
 
-      @media (min-width: $screen-xl) {
-        margin-left: 8px;
+        @media (min-width: $screen-xl) {
+          margin-left: 8px;
+        }
       }
-    }
+    }*/
   }
 
   &__link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
+    border-radius:50%;
 
     svg {
-      width: 32px;
-      height: 32px;
+      width: 24px;
+      height: 24px;
 
-      @media (min-width: $screen-xl) {
+      // width: 32px;
+      // height: 32px;
+
+      /*@media (min-width: $screen-xl) {
         width: 24px;
         height: 24px;
-      }
+      }*/
     }
 
     &--viber {
-      color: $color-viber;
+      background-color: rgba($color-viber, 0.08);
+      color: $color-viber !important;
     }
 
-    &--skype {
+    /*&--skype {
       color: $color-skype;
-    }
+    }*/
 
     &--telegram {
-      color: $color-tg;
+      background-color: rgba($color-tg, 0.08);
+      color: $color-tg !important;
     }
 
     &--whatsapp {
-      color: $color-whapp;
+      background-color: #EFF8EE;
+      color: $color-whapp !important;
+    }
+    &--youtube {
+      background-color:$color-youtube;
+      color:$secondary-color !important;
+    }
+    &--instagram {
+      background-color:$color-instagram;
+    }
+    &--facebook {
+      background-color:$color-facebook;
+    }
+    &--linkedin {
+      background-color:$color-linkedin;
     }
   }
 }

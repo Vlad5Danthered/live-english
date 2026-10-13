@@ -19,7 +19,7 @@
     width: 100%;
     padding: $field-padding-vertical  $field-padding-horizontal;
     margin: 0;
-    line-height: $line-height;
+    line-height: $line-height-140;
     font-size: $font-size;
     font-family: inherit;
     background-color: $white;
@@ -62,7 +62,7 @@
     }
 
     @at-root textarea#{&} {
-      $textarea-height: ($line-height * 2) + ($field-padding-vertical * 2);
+      $textarea-height: ($line-height-140 * 2) + ($field-padding-vertical * 2);
 
       height: auto;
       min-height: calc(#{$textarea-height} + 2px);

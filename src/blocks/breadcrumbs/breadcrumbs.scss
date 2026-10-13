@@ -23,6 +23,12 @@
       @include col-offset(xl, 0);
       @include col(xl, 9);
     }
+
+    @media (min-width: $screen-md) {
+      & {
+        margin-left: 0;
+      }
+    }
   }
 
   &__list {
@@ -85,7 +91,8 @@
     font-weight: 600;
     color: $text-muted;
     text-decoration: none;
-    white-space: nowrap;
+    // white-space: nowrap;
+    white-space: normal;
 
     &:hover,
     &:focus {

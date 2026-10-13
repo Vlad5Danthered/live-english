@@ -124,6 +124,16 @@
     white-space: nowrap;
     transition: all 0.2s ease-out;
 
+    &.cc-dismiss {
+      //height: 56px;
+      border-radius: 16px;
+  
+      &:hover,
+      &:focus {
+        background-color: #bf2e31 !important;
+      }
+    }
+
     &:hover,
     &:focus {
       text-decoration: none;

@@ -7,19 +7,19 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  .flickity-viewport {
+  /*.flickity-viewport {
     transition: height $transition-time;
-  }
+  }*/
 
-  .carousel-cell-image {
+  /*.carousel-cell-image {
     transition: opacity 0.4s;
     opacity: 0;
-  }
+  }*/
 
-  .flickity-lazyloaded,
+  /*.flickity-lazyloaded,
   .flickity-lazyerror {
     opacity: 1;
-  }
+  }*/
 
   .slider-nav {
     position: relative;
@@ -40,7 +40,7 @@
       }
     }
 
-    &__dot {
+    &__dot::before {
       background-color: $main-color;
     }
   }
