@@ -4,10 +4,11 @@
   flex-direction: column;
   height: 100%;
   padding: 16px;
-  border: 1px solid $border-color;
-  border-radius: $border-radius * 2;
-  box-shadow: $shadow;
+  // border: 1px solid $border-color;
+  border-radius: $border-radius-l;
+  // box-shadow: $shadow;
   overflow: hidden;
+  background-color: $white;
 
   @media (min-width: $screen-xl) {
     padding: 32px;
@@ -15,20 +16,18 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  p > span {
-    padding-right: 6px;
-    font-weight: 600;
-  }
-
   &__wrapper {
-    margin-bottom: 96px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: $section-bg;
 
     @media (min-width: $screen-xl) {
-      margin-bottom: 112px;
+      padding-top: 88px;
+      padding-bottom: 88px;
     }
 
-    header {
-      margin-bottom: 32px;
+    & header {
+      margin-bottom: 24px;
       text-align: center;
 
       @media (min-width: $screen-xl) {
@@ -46,12 +45,15 @@
   }
 
   &__col {
-    @include col(xs, 12);
-    @include col(md, 6);
-    margin-bottom: 32px;
+    // @include col(xs, 12);
+    // @include col(md, 6);
+    @include col($screen: xs, $column: 12, $gutter: 20px);
+    @include col($screen: md, $column: 6, $gutter: 20px);
+    
+    margin-bottom: 16px;
 
     @media (min-width: $screen-xl) {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
   }
 
@@ -82,6 +84,8 @@
       flex-basis: auto;
       margin: 0;
       color: inherit;
+      white-space: break-spaces;
+      margin-right: 42px;
     }
   }
 
@@ -102,6 +106,31 @@
     }
   }
 
+    & .dotted-list__label {
+      color: $text-color;
+      font-size: $font-size;
+      font-weight: 600;
+
+      @media (max-width: 340px) {
+        font-size: $font-size-sm - 1;
+        line-height: $line-height-130;
+      }
+    }
+    
+    & .dotted-list__value {
+      color: $text-muted;
+      font-size: $font-size-sm;
+      font-weight: 400;
+
+      @media (min-width: $screen-md) {
+        font-size: $font-size;
+      }
+      @media (max-width: 340px) {
+        font-size: $font-size-sm - 1;
+        line-height: $line-height-130;
+      }
+    }
+
   &__descr {
     margin: 0;
     font-weight: 600;
@@ -114,6 +143,21 @@
     justify-content: space-between;
     gap: 16px;
     margin-top: auto;
+    & > div {
+      display: flex;
+      align-items: center;
+
+      & span {
+        margin: 0;
+      }
+
+      & span:first-child {
+        padding-right: 6px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: $line-height-120;
+      }
+    }
 
     p {
       flex: 1 1 auto;
@@ -128,35 +172,46 @@
       }
     }
   }
+  
+  &__badge {
+    &:not(:empty) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 6px 18px;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $white;
+      border-bottom-left-radius: $border-radius-m;
+      pointer-events: none;
+    }
+    &--hot {
+      background-color: $secondary-color;
+      box-shadow: -8px 8px 18px -8px rgba($secondary-color, 0.72); //0.24 по дизайну
+    }
+    &--descount {
+      background-color: $color-accept-yellow;
+      box-shadow: -8px 8px 18px -8px rgba($color-accept-yellow, 0.72); //0.24 по дизайну
+    }
 
-  &__badge:not(:empty) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 4px 16px;
-    font-size: 14px;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: $white;
-    border-bottom-left-radius: $border-radius * 2;
-    pointer-events: none;
+    &--new {
+      background-color: $color-accept-green;
+      box-shadow: -8px 8px 18px -8px rgba($color-accept-green, 0.72); //0.24 по дизайну
+    }
 
-    @media (min-width: $screen-xl) {
-      padding: 6px 24px;
-      font-size: 20px;
+    &--label {
+      background-color: $color-accept-blue;
+      box-shadow: -8px 8px 18px -8px rgba($color-accept-blue, 0.72); //0.24 по дизайну
     }
   }
 
   &__col-link {
-    //@include col-offset(xs, 2);
-    @include col(xs, 12);
-    @include col-offset(md, 4);
-    @include col(md, 4);
-    @include col-offset(xl, 8);
-    @include col(xl, 4);
-  }
-
-  &__link {
-    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+    
+    @media (min-width: $screen-xl) {
+      margin-top: 20px;
+    }
   }
 }

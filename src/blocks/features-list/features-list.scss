@@ -14,10 +14,12 @@
   $block-name:                &; // #{$block-name}__element
 
   &__wrapper {
-    margin-bottom: 96px;
+    padding-top: 64px;
+    padding-bottom: 64px;
 
     @media (min-width: $screen-xl) {
-      margin-bottom: 112px;
+      padding-top: 88px;
+      padding-bottom: 88px;
     }
   }
 

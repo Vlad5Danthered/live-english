@@ -13,7 +13,7 @@ input {
     display:block !important
   }
 }
-.fetchit
+.fetchit {
   &-toasts {
     position: fixed;
     top: 24px;
@@ -113,6 +113,7 @@ input {
       }
     }
   }
+}
 
 @keyframes fetchit-toast-in {
   from {

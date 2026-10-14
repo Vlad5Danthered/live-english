@@ -1,0 +1,47 @@
+.dotted-list {
+  width: 100%;
+  margin: 0;
+  pointer-events: none;
+
+  &__item {
+    color: $text-muted;
+    display: flex;
+    position: relative;
+    height: 34px;
+    justify-content: space-between;
+
+    &:not(:last-child)::after, .training-programs-card__text &::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 1px; /* Толщина линии (Weight: 1) */
+      background-image: linear-gradient(to right, $text-muted 1px, transparent 1px); /* Размер точки (Dash: 1) */
+      background-size: 7px 1px; /* Шаг паттерна: Dash (1) + Gap (6) = 7px */
+      background-repeat: repeat-x;
+    }
+  }
+
+  &__label {
+    color: $text-muted;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    white-space: nowrap;
+    margin: 0;
+    padding: 7px 0 4px;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size;
+    }
+  }
+
+  &__value {
+    color: $text-color;
+    font-size: $font-size;
+    font-weight: 600;
+    text-align: right;
+    margin: 0;
+    padding: 7px 0 4px;
+  }
+}

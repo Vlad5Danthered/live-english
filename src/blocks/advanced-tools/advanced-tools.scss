@@ -1,8 +1,10 @@
 .advanced-tools {
-  margin-bottom: 96px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 
   @media (min-width: $screen-xl) {
-    margin-bottom: 112px;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -10,10 +12,13 @@
   &__block {
 
     & + & {
-      margin-top: 96px;
+      margin-top: 24px;
 
+      @media (min-width: $screen-md) {
+        margin-top: 48px;
+      }
       @media (min-width: $screen-xl) {
-        margin-top: 112px;
+        margin-top: 80px;
       }
     }
 
@@ -47,7 +52,11 @@
   }
 
   &__row {
-    gap: 40px 0;
+    gap: 24px 0;
+
+    @media (mim-width: $screen-md) {
+      gap: 40px 0;
+    }
   }
 
   &__col-img {
@@ -68,6 +77,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  &__title {
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 12px;      
+    }
   }
 
   &__img,

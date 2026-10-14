@@ -1,5 +1,6 @@
 .steps {
-  margin-bottom: 96px;
+  padding-top: 64px;
+  padding-bottom: 64px;
   //background-size: 1200px;
   background-repeat: no-repeat;
   //background-position: center top 125px;
@@ -13,7 +14,8 @@
   }
 
   @media (min-width: $screen-xl) {
-    margin-bottom: 112px;
+    padding-top: 88px;
+    padding-bottom: 88px;
     background-size: 1920px;
     //background-repeat: no-repeat;
     background-position: center top -26px;
@@ -23,7 +25,7 @@
   $block-name:                &; // #{$block-name}__element
 
   .row {
-    gap: 24px 0;
+    gap: 8px 0;
 
     @media (min-width: $screen-xl) {
       gap: 40px 0;
@@ -31,12 +33,12 @@
   }
 
   &__header {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     text-align: center;
 
     @media (min-width: $screen-xl) {
-      margin-bottom: 64px;
-      text-align: initial;
+      margin-bottom: 40px;
+      text-align: inherit;
     }
   }
 
@@ -45,9 +47,12 @@
   }
 
   &__col {
-    @include col(xs, 12);
-    @include col(md, 6);
-    @include col(xl, 3);
+    // @include col(xs, 12);
+    // @include col(md, 6);
+    // @include col(xl, 3);
+    @include col($screen: xs, $column: 12, $gutter: 20px);
+    @include col($screen: md, $column: 6, $gutter: 20px);
+    @include col($screen: xl, $column: 3, $gutter: 20px);
     // margin-bottom: 24px;
 
     // @media (min-width: $screen-xl) {
@@ -55,9 +60,9 @@
     // }
   }
 
-  &__card {
+  /*&__card {
 
-  }
+  }*/
 
   &__card-img {
 

@@ -1,14 +1,20 @@
 .teachers {
-  margin-bottom: 96px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: $section-bg;
 
   @media (min-width: $screen-xl) {
-    margin-bottom: 112px;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   $block-name:                &; // #{$block-name}__element
 
   &__header {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;  
+    }
   }
 
   &__title {
@@ -20,16 +26,24 @@
   }
 
   &__row {
-    gap: 24px 0;
+    gap: 16px 0;
+    @include row(20px, 20px, 20px, 20px, 20px, 20px);
+
+    @media (min-width: $screen-md) {
+      gap: 20px 0;
+    }
   }
 
   &__col {
-    @include col(xs, 12);
-    @include col(md, 6);
-    @include col(xl, 4);
+    // @include col(xs, 12);
+    // @include col(md, 6);
+    // @include col(xl, 4);
+    @include col($screen: xs, $column: 12, $gutter: 20px);
+    @include col($screen: md, $column: 6, $gutter: 20px);
+    @include col($screen: xl, $column: 4, $gutter: 20px);
   }
 
-  &__link-wrapper {
+  /*&__link-wrapper {
     //margin-top: 24px;
 
     @media (min-width: $screen-md) {
@@ -43,5 +57,5 @@
     a {
       width: 100%;
     }
-  }
+  }*/
 }

@@ -59,7 +59,9 @@
     "consulting": [],
     "advanced-tools": [],
     "teachers": [],
-    "teacher-card": []
+    "teacher-card": [],
+    "fetchit": [],
+    "dotted-list": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

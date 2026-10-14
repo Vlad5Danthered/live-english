@@ -1,13 +1,13 @@
 .consulting {
   //position: relative;
   //z-index: 0;
-  padding-top: 72px;
-  padding-bottom: 72px;
-  margin-bottom: 72px;
+  padding-top: 64px;
+  padding-bottom: 64px;
   background-color: $section-bg;
 
   @media (min-width: $screen-xl) {
-   margin-bottom: 96px;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   $block-name:                &; // #{$block-name}__element

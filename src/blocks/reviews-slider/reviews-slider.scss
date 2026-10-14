@@ -1,8 +1,10 @@
 .reviews-slider {
-  margin-bottom: 96px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 
   @media (min-width: $screen-xl) {
-    margin-bottom: 112px;
+    padding-top: 88px;
+    padding-bottom: 88px;
   }
 
   $block-name:                &; // #{$block-name}__element
@@ -46,7 +48,7 @@
   }
 
   &__title {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     text-align: center;
 
     @media (min-width: $screen-xl) {

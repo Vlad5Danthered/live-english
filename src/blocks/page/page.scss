@@ -343,6 +343,9 @@ a {
   @include col(xs, 12);
   @include col(md, 10);
   @include col(xl, 6);
+  @include col($screen: xs, $column: 12, $gutter: 20px);
+  @include col($screen: md, $column: 10, $gutter: 20px);
+  @include col($screen: xl, $column: 6, $gutter: 20px);
   margin-bottom: 32px;
 
   @media (min-width: $screen-xl) {
@@ -351,9 +354,12 @@ a {
 }
 
 .col-1-2-3 {
-  @include col(xs, 12);
-  @include col(md, 6);
-  @include col(xl, 4);
+  // @include col(xs, 12);
+  // @include col(md, 6);
+  // @include col(xl, 4);
+  @include col($screen: xs, $column: 12, $gutter: 20px);
+  @include col($screen: md, $column: 6, $gutter: 20px);
+  @include col($screen: xl, $column: 4, $gutter: 20px);
   margin-bottom: 32px;
 
   @media (min-width: $screen-xl) {
