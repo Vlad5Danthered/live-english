@@ -5,34 +5,24 @@
   justify-content: center;
   position: absolute;
 
-  $block-name: &;
+  $block-name:                &; // #{$block-name}__element
 
   &__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    color: $secondary-color;
+    width: 40px;
+    height: 40px;
+    background-color: $white;
+    background-size: 12px 19px;
+    background-repeat: no-repeat;
+    background-position: center;
 
-    svg {
-      display: block;
-      width: 10px;
-      height: 7px;
-      fill: currentColor;
-      stroke: currentColor; // нужно, если иконка в спрайте нарисована обводкой
-      pointer-events: none;
-    }
 
-    // иконка arrow-down-icon смотрит вниз, поэтому поворачиваем
     &--prev {
-      transform: rotate(90deg);   // вниз -> влево
+      transform: rotate(180deg);
+      background-image: svg-load('../blocks/slider-nav/bg-img/slide-arrow-r.svg', fill=$secondary-color);
     }
 
     &--next {
-      transform: rotate(-90deg);  // вниз -> вправо
+      background-image: svg-load('../blocks/slider-nav/bg-img/slide-arrow-r.svg', fill=$secondary-color);
     }
   }
 
@@ -41,33 +31,63 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 8px;
     margin: 0 32px;
     width: auto !important;
 
-    @media (max-width: 400px) { margin: 0 20px; }
-    @media (max-width: 360px) { margin: 0 10px; }
-    @media (max-width: 340px) { margin: 0; }
+    @media(max-width:400px) {
+      & {
+        margin: 0 20px;
+      }
+    }
+    @media (max-width:360px) {
+      & {
+        margin: 0 10px;
+      }
+    }
+    @media (max-width:340px) {
+      & {
+        margin: 0 0px;
+      }
+    }
   }
 
   &__dot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
+    /*width: 5px;
+    height: 5px;
+    margin: 0 8px;
+    background-color: $secondary-color;
+    border-radius: 50%;*/
+
+    position: relative;
+    width: 24px;
+    height: 24px;
     margin: 0;
-    border-radius: 50%;
     background-color: transparent;
-    color: $secondary-color;
-    font-size: 20px;
-    line-height: 1;
-    font-weight: 400;
-    transition: background-color .2s, color .2s;
 
     &.is-selected {
-      background-color: $main-color; 
-      color: $white;
+      // width: 24px;
+      // border-radius: 5px;
+
+      width: 32px;
+
+      &::before {
+        width: 24px;
+        height: 6px;
+        border-radius: 5px;
+        // background-color: $secondary-color;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 6px;
+      height: 6px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-color: $secondary-color;
     }
   }
 

@@ -1,0 +1,25 @@
+<!--DEV
+@ @include('blocks/slider-nav-number/slider-nav-number.html')
+-->
+
+<nav class="slider-nav-number" aria-label="Навигация по слайдам">
+  <button class="button slider-nav-number__btn slider-nav-number__btn--prev" type="button" aria-label="Предыдущий слайд">
+    <svg width="10" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-down-icon"></use></svg>
+  </button>
+
+  <div class="slider-nav-number__pagination">
+    <button type="button" class="button  slider-nav-number__dot  is-selected" aria-current="true">
+      <span class="visually-hidden">Slide </span>1
+    </button>
+    <button type="button" class="button  slider-nav-number__dot">
+      <span class="visually-hidden">Slide </span>2
+    </button>
+    <button type="button" class="button  slider-nav-number__dot">
+      <span class="visually-hidden">Slide </span>3
+    </button>
+  </div>
+
+  <button class="button slider-nav-number__btn slider-nav-number__btn--next" type="button" aria-label="Следующий слайд">
+    <svg width="10" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-down-icon"></use></svg>
+  </button>
+</nav>

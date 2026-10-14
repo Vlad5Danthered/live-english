@@ -66,17 +66,17 @@
     slidesPerView: '1',
 
     navigation: {
-      nextEl: container.querySelector('.slider-nav__btn--next'),
-      prevEl: container.querySelector('.slider-nav__btn--prev'),
+      nextEl: container.querySelector('.slider-nav-number__btn--next'),
+      prevEl: container.querySelector('.slider-nav-number__btn--prev'),
     },
 
     pagination: {
-      el: container.querySelector('.slider-nav__pagination'),
+      el: container.querySelector('.slider-nav-number__pagination'),
       clickable: true,
-      bulletClass: 'button slider-nav__dot',
+      bulletClass: 'button slider-nav-number__dot',
       bulletActiveClass: 'is-selected',
       renderBullet: function (index, className) {
-        return `<button class="${className}"><span class="visually-hidden">Slide ${index + 1}</span></button>`;
+        return `<button type="button" class="button  ${className}"><span class="visually-hidden">Slide </span>${index + 1}</button>`
       }
     }
   });

@@ -12,7 +12,7 @@
     @include col(xl, 4);
 
     @media (max-width: $screen-xl - 1) {
-      margin-bottom: 24px;
+      margin-bottom: 12px;
     }
   }
 
@@ -32,11 +32,12 @@
 
   &__fig-caption {
     // margin-top: 12px;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     font-weight: 600;
     text-align: center;
 
     @media (min-width: $screen-xl) {
+      margin-bottom: 48px;
       margin-top: 32px;
       text-align: initial;
     }
@@ -54,7 +55,11 @@
     max-width: 92px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: $border-radius;
+    border-radius: $border-radius-l;
+
+    @media (min-width: $screen-md) {
+      max-width: 92px * 2;
+    }
 
     @media (min-width: $screen-xl) {
       max-width: initial;
@@ -71,8 +76,9 @@
     margin: 6px;
     padding: 42px 16px;
     background-color: $white;
-    box-shadow: $shadow;
-    border-radius: $border-radius;
+    // box-shadow: $shadow;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-l;
     //border: 1px solid red;
 
     @media (min-width: $screen-md) {

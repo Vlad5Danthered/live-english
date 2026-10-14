@@ -1,0 +1,88 @@
+.slider-nav-number {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+  $block-name: &;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    color: $secondary-color;
+
+    svg {
+      display: block;
+      width: 10px;
+      height: 7px;
+      fill: currentColor;
+      stroke: currentColor; // нужно, если иконка в спрайте нарисована обводкой
+      pointer-events: none;
+    }
+
+    // иконка arrow-down-icon смотрит вниз, поэтому поворачиваем
+    &--prev {
+      transform: rotate(90deg);   // вниз -> влево
+    }
+
+    &--next {
+      transform: rotate(-90deg);  // вниз -> вправо
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 12px;
+    width: auto !important;
+
+    @media (max-width: 400px) { margin: 0 20px; }
+    @media (max-width: 360px) { margin: 0 10px; }
+    @media (max-width: 340px) { margin: 0; }
+  }
+
+  &__dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    border-radius: 50%;
+    background-color: transparent;
+    color: $secondary-color;
+    font-size: $font-size-sm;
+    line-height: 1;
+    font-weight: 400;
+    transition: background-color .2s, color .2s;
+
+    &.is-selected {
+      background-color: $main-color; 
+      color: $white;
+    }
+  }
+
+  .button {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    opacity: $opacity;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.is-selected {
+      opacity: 1;
+    }
+  }
+}

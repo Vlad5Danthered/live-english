@@ -23,9 +23,9 @@
     opacity: 1;
   }*/
 
-  .slider-nav {
+  .slider-nav-number {
     position: relative;
-    margin-top: 32px;
+    margin-top: 12px;
 
     @media (min-width: $screen-xl) {
       justify-content: flex-end;
@@ -33,17 +33,11 @@
 
     &__btn {
 
-      &--prev {
-        background-image: svg-load('../blocks/slider-nav/bg-img/slide-arrow-r.svg', fill=$main-color);
-      }
-
-      &--next {
-        background-image: svg-load('../blocks/slider-nav/bg-img/slide-arrow-r.svg', fill=$main-color);
-      }
+      color: $main-color;
     }
 
-    &__dot::before {
-      background-color: $main-color;
+    &__dot {
+      color: $main-color;
     }
   }
 
