@@ -26,62 +26,52 @@
           <div class="row">
             <div class="md-narrow-layout__col">
 
-              <div class="contacts__header">
-                <h1 class="contacts__title">Contacts</h1>
-                <p class="contacts__intro">Interesting and useful thematic articles on the English language and the process of learning it</p>
-              </div>
-
               <div class="row">
+                <div class="faq-index__contact-page" style="display: flex; flex-direction: column;">
+                  <div class="faq-index__contacts">
+                    <div class="contacts__header">
+                      <h1 class="contacts__title">Contacts</h1>
+                      <p class="contacts__intro">Interesting and useful thematic articles on the English language and the process of learning it</p>
+                    </div>
 
-                <div class="contacts__contact-col">
+                    <ul class="list-nostyled  faq-index__contact-list">
 
+                      <li class="faq-index__contact-item">
+                        <h2>Email</h2>
+                        <a href="mailto:info@live-english.com.ua" class="faq-index__info">info@live-english.com.ua</a>
+                      </li>
 
-                  <div class="row">
+                      <li class="faq-index__contact-item">
+                        <h2>Addres</h2>
+                        <p class="faq-index__info">03067 г. Киев, улица Николая Василенко, 21. 3 этаж</p>
+                      </li>
 
-                    <section class="contacts__item-col">
-                      <h2 class="contacts__item-title">Address</h2>
-                      <p class="contacts__item-text">
-                        <span>03067</span>
-                        <span>г. Киев</span>,
-                        <span>ул. Николая Василенко, 21 (3 эт.)</span>
-                      </p>
-                    </section>
+                      <li class="faq-index__contact-item">
+                        <h2>Phone & Messengers</h2>
+                        @@include('blocks/messenger-links/messenger-links.html')
+                        <a  href="tel:+380500433853" class="faq-index__info">+38 050 043 38 53</a>
+                      </li>
 
-                    <section class="contacts__item-col">
-                      <h2 class="contacts__item-title">Email</h2>
-                      <p class="contacts__item-text">
-                        <a href="mailto:info@live-english.com.ua">
-                          <span>info@live-english.com.ua</span>
-                        </a>
-                      </p>
-                    </section>
+                      <li class="faq-index__contact-item">
+                        <h2>Society</h2>
+                        @@include('blocks/messenger-links/messenger-links.html')
+                      </li>
 
-                    <section class="contacts__item-col">
-                      <h2 class="contacts__item-title">Phone</h2>
-                      <p class="contacts__item-text">
-                        <a href="tel:+380443841654">
-                          <span>+38 044 384 16 54</span>
-                        </a>
-                      </p>
-                      <p class="contacts__item-text">
-                        <a href="tel:+380443841654">
-                          <span>+38 044 384 16 54</span>
-                        </a>
-                      </p>
-                      <p class="contacts__item-text">
-                        <a href="tel:+380443841654">
-                          <span>+38 044 384 16 54</span>
-                        </a>
-                      </p>
-                    </section>
+                    </ul>
 
-                    <section class="contacts__item-col">
-                      <h2 class="contacts__item-title">Messengers & Social Net</h2>
-                      @@include('blocks/social-links/social-links.html')
-                    </section>
+                    <div class="contacts__wrapper-link">
+                      <a href="#" class="btn  btn--icon">
+                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#download"></use></svg>
+                        <span>Презентація Школи</span>
+                      </a>
+
+                      <button class="btn  btn--red  btn--icon" data-toggle="modal" data-target="#trialLessonModal">
+                        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#business"></use></svg>
+                        <span>Запросити на тендер</span>
+                      </button>
+                    </div>
 
                   </div>
-
                 </div>
 
                 <div class="contacts__map-col">
@@ -96,6 +86,10 @@
           </div>
 
         </div>
+
+        @@include('blocks/consulting/consulting.html', {
+          "modClass": "consulting--bg-white"
+        })
 
       </main>
 

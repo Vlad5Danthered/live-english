@@ -29,6 +29,13 @@
     }*/
   }
 
+  &__contacts {
+    @media (max-width: $screen-xl - 1) {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+
   &__contacts-col {
     @include col(xs, 12);
     @include col-offset(md, 1);
@@ -40,6 +47,11 @@
     @media (min-width: $screen-xl) {
       margin-bottom: 48px;
     }
+  }
+
+  &__contact-page {
+    @include col(xd, 12);
+    @include col(xl, 6);
   }
 
   &__accordion-col {
@@ -74,6 +86,10 @@
     flex-wrap: wrap;
     margin-bottom: 16px;
 
+    #{$block-name}__contact-page &{
+      gap: 12px 0;
+    }
+
     @media (min-width: $screen-md) {
       justify-content: space-between;
     }
@@ -90,10 +106,17 @@
     border: 1px solid $border-color;
     border-radius: $border-radius-m;
     justify-content: center;
-
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    #{$block-name}__contact-page & {
+      align-items: start;
+      justify-content: start;
+      padding: 16px;
+      @include col(xl, 5.8776);
+      @include col(md, 5.9252);
+    }
 
     @media (min-width: $screen-md) {
       // flex: 0 1;
@@ -105,6 +128,10 @@
 
     & + & {
       margin-top: 16px;
+
+      #{$block-name}__contact-page & {
+        margin-top: 0;
+      }
 
       @media (min-width: $screen-md) {
         margin-top: 0;
@@ -122,8 +149,29 @@
       }
     }
 
+    h2 {
+      font-size: $font-size-sm;
+      margin-bottom: 8px;
+      text-align: center;
+      color: $text-muted;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
     & .messenger-links {
       margin-bottom: 12px;
+    }
+  }
+
+  &__info {
+    font-size: $font-size;
+    font-weight: 600;
+    color:$black !important;
+    margin: 0 !important;
+    text-align: start !important;
+
+    @media (max-width: $screen-md - 1) {
+      font-size: $font-size !important;
     }
   }
 

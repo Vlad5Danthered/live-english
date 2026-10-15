@@ -10,15 +10,16 @@
   $block-name:                &; // #{$block-name}__element
 
   &__header {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     @media (min-width: $screen-xl) {
-      margin-bottom: 40px;  
+      margin-bottom: 20px;  
     }
   }
 
   &__intro {
     font-size: 20px;
     color: $text-muted;
+    margin-top: 0;
   }
 
   &__contact-col {
@@ -49,6 +50,28 @@
     }
   }
 
+  &__wrapper-link {
+    margin-top: 20px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (min-width: $screen-xl) {
+      margin: 0;
+      justify-content: start;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 12px;
+    }
+  }
+
   &__item-title {
     margin-bottom: 8px;
     font-size: $font-size-sm;
@@ -73,7 +96,8 @@
   }
 
   &__map {
-    height: 350px;
+    min-height: 350px;
+    height: 100%;
     overflow: hidden;
     border-radius: $border-radius;
     box-shadow: $shadow;

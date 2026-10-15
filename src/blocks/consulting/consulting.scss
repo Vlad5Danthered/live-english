@@ -3,7 +3,10 @@
   //z-index: 0;
   padding-top: 64px;
   padding-bottom: 64px;
-  background-color: $section-bg;
+
+  &:not(&--bg-white) {
+    background-color: $section-bg;
+  }
 
   @media (min-width: $screen-xl) {
     padding-top: 88px;
@@ -20,6 +23,11 @@
     @media (min-width: $screen-md) {
       padding: 32px;
     }
+  }
+
+  &--bg-white .test__form-text-inputs {
+    background-color: $section-bg;
+    border-radius: $border-radius-l;
   }
 
   &__row {
