@@ -37,7 +37,7 @@
     }
   </style>
 
-  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <link href="css/style.css" rel="stylesheet" media="screen">
 
 </head>
 
@@ -46,7 +46,7 @@
 
   <div class="page__inner">
 
-    <div class="page__content">
+    <div class="page__content">
 
       <div class="page-header__wrapper">
         <header class="container  page-header">
@@ -118,7 +118,7 @@
                   </li>
                 </ul>
 
-                <div class="lang-switcher">
+                <!--<div class="lang-switcher">
                   <ul class="list-nostyled  lang-switcher__list">
                     <li class="lang-switcher__item  active">
                       <a class="lang-switcher__link" title="Укр. язык"><span>Ua</span></a>
@@ -128,6 +128,25 @@
                     </li>
                     <li class="lang-switcher__item">
                       <a href="#" class="lang-switcher__link" title="Англ. язык"><span>En</span></a>
+                    </li>
+                  </ul>
+                </div>-->
+                <div class="lang-switcher" data-lang-switcher>
+                  <button class="lang-switcher__toggle" type="button"
+                          aria-haspopup="true" aria-expanded="false" aria-controls="lang-list"
+                          title="Англ. язык">
+                    <span class="lang-switcher__current">En</span>
+                    <svg class="lang-switcher__icon" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+                      <path d="M2 4.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+
+                  <ul class="list-nostyled  lang-switcher__list" id="lang-list">
+                    <li class="lang-switcher__item">
+                      <a href="#" class="lang-switcher__link" lang="uk" hreflang="uk" title="Укр. язык">Ua</a>
+                    </li>
+                    <li class="lang-switcher__item">
+                      <a href="#" class="lang-switcher__link" lang="ru" hreflang="ru" title="Рус. язык">Ru</a>
                     </li>
                   </ul>
                 </div>
@@ -191,97 +210,99 @@
               <p class="review-card-vert__intro">Interesting and useful thematic articles on the English language and the process of learning it</p>
             </div>
           </div>
-        </div>
+        </div>
 
-        <section class="logo-slider">
+        <section class="logo-slider swiper">
           <h2 class="visually-hidden">Наши клиенты (Нам доверяют..)</h2>
-          <div class="carousel-cell logo-slider__item">
-            <div class="logo-slider__img">
-              <picture>
-                <source data-flickity-lazyload-srcset="img/asus-logo.webp" type="image/webp">
-                <img data-flickity-lazyload-src="img/asus-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96">
-              </picture>
+          <div class="swiper-wrapper">
+            <div class="logo-slider__item swiper-slide">
+              <div class="logo-slider__img">
+                <picture>
+                  <source srcset="img/asus-logo.webp" type="image/webp">
+                  <img src="img/asus-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96" loading="lazy">
+                </picture>
+              </div>
             </div>
-          </div>
 
-          <div class="carousel-cell logo-slider__item">
-            <div class="logo-slider__img">
-              <picture>
-                <source data-flickity-lazyload-srcset="img/farmak-logo.webp" type="image/webp">
-                <img data-flickity-lazyload-src="img/farmak-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96">
-              </picture>
+            <div class="logo-slider__item swiper-slide">
+              <div class="logo-slider__img">
+                <picture>
+                  <source srcset="img/farmak-logo.webp" type="image/webp">
+                  <img src="img/farmak-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96"  loading="lazy">
+                </picture>
+              </div>
             </div>
-          </div>
 
-          <div class="carousel-cell logo-slider__item">
-            <div class="logo-slider__img">
-              <picture>
-                <source data-flickity-lazyload-srcset="img/huawei-logo.webp" type="image/webp">
-                <img data-flickity-lazyload-src="img/huawei-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96">
-              </picture>
+            <div class="logo-slider__item swiper-slide">
+              <div class="logo-slider__img">
+                <picture>
+                  <source srcset="img/huawei-logo.webp" type="image/webp">
+                  <img src="img/huawei-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96"  loading="lazy">
+                </picture>
+              </div>
             </div>
-          </div>
 
-          <div class="carousel-cell logo-slider__item">
-            <div class="logo-slider__img">
-              <picture>
-                <source data-flickity-lazyload-srcset="img/impel-group-logo.webp" type="image/webp">
-                <img data-flickity-lazyload-src="img/impel-group-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96">
-              </picture>
+            <div class="logo-slider__item swiper-slide">
+              <div class="logo-slider__img">
+                <picture>
+                  <source srcset="img/impel-group-logo.webp" type="image/webp">
+                  <img src="img/impel-group-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96"  loading="lazy">
+                </picture>
+              </div>
             </div>
-          </div>
 
-          <div class="carousel-cell logo-slider__item">
-            <div class="logo-slider__img">
-              <picture>
-                <source data-flickity-lazyload-srcset="img/kyiv-bank-logo.webp" type="image/webp">
-                <img data-flickity-lazyload-src="img/kyiv-bank-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96">
-              </picture>
+            <div class="logo-slider__item swiper-slide">
+              <div class="logo-slider__img">
+                <picture>
+                  <source srcset="img/kyiv-bank-logo.webp" type="image/webp">
+                  <img src="img/kyiv-bank-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96"  loading="lazy">
+                </picture>
+              </div>
             </div>
-          </div>
 
-          <div class="carousel-cell logo-slider__item">
-            <div class="logo-slider__img">
-              <picture>
-                <source data-flickity-lazyload-srcset="img/people-net-logo.webp" type="image/webp">
-                <img data-flickity-lazyload-src="img/people-net-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96">
-              </picture>
+            <div class="logo-slider__item swiper-slide">
+              <div class="logo-slider__img">
+                <picture>
+                  <source srcset="img/people-net-logo.webp" type="image/webp">
+                  <img src="img/people-net-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96"  loading="lazy">
+                </picture>
+              </div>
             </div>
-          </div>
 
-          <div class="carousel-cell logo-slider__item">
-            <div class="logo-slider__img">
-              <picture>
-                <source data-flickity-lazyload-srcset="img/renault-logo.webp" type="image/webp">
-                <img data-flickity-lazyload-src="img/renault-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96">
-              </picture>
+            <div class="logo-slider__item swiper-slide">
+              <div class="logo-slider__img">
+                <picture>
+                  <source srcset="img/renault-logo.webp" type="image/webp">
+                  <img src="img/renault-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96"  loading="lazy">
+                </picture>
+              </div>
             </div>
-          </div>
 
-          <div class="carousel-cell logo-slider__item">
-            <div class="logo-slider__img">
-              <picture>
-                <source data-flickity-lazyload-srcset="img/winner-automotive-logo.webp" type="image/webp">
-                <img data-flickity-lazyload-src="img/winner-automotive-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96">
-              </picture>
+            <div class="logo-slider__item swiper-slide">
+              <div class="logo-slider__img">
+                <picture>
+                  <source srcset="img/winner-automotive-logo.webp" type="image/webp">
+                  <img src="img/winner-automotive-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96"  loading="lazy">
+                </picture>
+              </div>
             </div>
-          </div>
 
-          <div class="carousel-cell logo-slider__item">
-            <div class="logo-slider__img">
-              <picture>
-                <source data-flickity-lazyload-srcset="img/raiffeisen-bank-logo.webp" type="image/webp">
-                <img data-flickity-lazyload-src="img/raiffeisen-bank-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96">
-              </picture>
+            <div class="logo-slider__item swiper-slide">
+              <div class="logo-slider__img">
+                <picture>
+                  <source srcset="img/raiffeisen-bank-logo.webp" type="image/webp">
+                  <img src="img/raiffeisen-bank-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96"  loading="lazy">
+                </picture>
+              </div>
             </div>
-          </div>
 
-          <div class="carousel-cell logo-slider__item">
-            <div class="logo-slider__img">
-              <picture>
-                <source data-flickity-lazyload-srcset="img/tele-nedelya-logo.webp" type="image/webp">
-                <img data-flickity-lazyload-src="img/tele-nedelya-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96">
-              </picture>
+            <div class="logo-slider__item swiper-slide">
+              <div class="logo-slider__img">
+                <picture>
+                  <source srcset="img/tele-nedelya-logo.webp" type="image/webp">
+                  <img src="img/tele-nedelya-logo.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="196" height="96"  loading="lazy">
+                </picture>
+              </div>
             </div>
           </div>
 
@@ -296,7 +317,7 @@
 
                 <li class="grid-sizer"></li>
 
-                <li class="review-card-vert__col  grid-item">
+                <li class="review-card-vert__col  grid-item">
                   <article class="review-card-vert">
                     <div class="review-card-vert__author">
                       <div class="embed-responsive embed-responsive--1-1  review-card-vert__img">
@@ -318,7 +339,7 @@
 
                 </li>
 
-                <li class="review-card-vert__col  grid-item">
+                <li class="review-card-vert__col  grid-item">
                   <article class="review-card-vert">
                     <div class="review-card-vert__author">
                       <div class="embed-responsive embed-responsive--1-1  review-card-vert__img">
@@ -340,7 +361,7 @@
 
                 </li>
 
-                <li class="review-card-vert__col  grid-item">
+                <li class="review-card-vert__col  grid-item">
                   <article class="review-card-vert">
                     <div class="review-card-vert__author">
                       <div class="embed-responsive embed-responsive--1-1  review-card-vert__img">
@@ -362,7 +383,7 @@
 
                 </li>
 
-                <li class="review-card-vert__col  grid-item">
+                <li class="review-card-vert__col  grid-item">
                   <article class="review-card-vert">
                     <div class="review-card-vert__author">
                       <div class="embed-responsive embed-responsive--1-1  review-card-vert__img">
@@ -384,7 +405,7 @@
 
                 </li>
 
-                <li class="review-card-vert__col  grid-item">
+                <li class="review-card-vert__col  grid-item">
                   <article class="review-card-vert">
                     <div class="review-card-vert__author">
                       <div class="embed-responsive embed-responsive--1-1  review-card-vert__img">
@@ -406,7 +427,7 @@
 
                 </li>
 
-                <li class="review-card-vert__col  grid-item">
+                <li class="review-card-vert__col  grid-item">
                   <article class="review-card-vert">
                     <div class="review-card-vert__author">
                       <div class="embed-responsive embed-responsive--1-1  review-card-vert__img">
@@ -432,7 +453,7 @@
 
             </div>
           </div>
-        </div>
+        </div>
         <article class="container  seo-text">
           <div class="row">
             <div class="seo-text__col  seo-text__col--no-index">
@@ -476,7 +497,7 @@
 
     </div>
 
-    <div class="page__footer-wrapper">
+    <div class="page__footer-wrapper">
 
       <footer class="container  page-footer">
         <div class="row">
@@ -646,7 +667,7 @@
 
           </div>
 
-          <div class="page-footer__copyrights-col">
+          <div class="page-footer__copyrights-col">
             <div class="copyrights">
               <div class="row">
 
@@ -678,7 +699,7 @@
         </div>
       </footer>
 
-    </div>
+    </div>
 
     <div id="mob-nav" class="mob-nav">
       <div class="container  mob-nav__inner">
@@ -878,7 +899,7 @@
   </script>
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
-  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
 
 
 </body>

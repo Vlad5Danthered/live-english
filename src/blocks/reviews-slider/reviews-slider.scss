@@ -23,7 +23,7 @@
     opacity: 1;
   }*/
 
-  .slider-nav-number {
+  .slider-nav {
     position: relative;
     margin-top: 12px;
 
@@ -32,12 +32,21 @@
     }
 
     &__btn {
+      &--prev {
+        background-image: svg-load('../blocks/slider-nav/bg-img/slide-arrow-r.svg', fill=$main-color);
+      }
 
-      color: $main-color;
+      &--next {
+        background-image: svg-load('../blocks/slider-nav/bg-img/slide-arrow-r.svg', fill=$main-color);
+      }
     }
 
     &__dot {
       color: $main-color;
+
+      &::before {
+        background-color: $main-color;
+      }
     }
   }
 

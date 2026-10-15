@@ -37,7 +37,7 @@
     }
   </style>
 
-  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <link href="css/style.css" rel="stylesheet" media="screen">
 
 </head>
 
@@ -118,7 +118,7 @@
                   </li>
                 </ul>
 
-                <div class="lang-switcher">
+                <!--<div class="lang-switcher">
                   <ul class="list-nostyled  lang-switcher__list">
                     <li class="lang-switcher__item  active">
                       <a class="lang-switcher__link" title="Укр. язык"><span>Ua</span></a>
@@ -128,6 +128,25 @@
                     </li>
                     <li class="lang-switcher__item">
                       <a href="#" class="lang-switcher__link" title="Англ. язык"><span>En</span></a>
+                    </li>
+                  </ul>
+                </div>-->
+                <div class="lang-switcher" data-lang-switcher>
+                  <button class="lang-switcher__toggle" type="button"
+                          aria-haspopup="true" aria-expanded="false" aria-controls="lang-list"
+                          title="Англ. язык">
+                    <span class="lang-switcher__current">En</span>
+                    <svg class="lang-switcher__icon" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+                      <path d="M2 4.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+
+                  <ul class="list-nostyled  lang-switcher__list" id="lang-list">
+                    <li class="lang-switcher__item">
+                      <a href="#" class="lang-switcher__link" lang="uk" hreflang="uk" title="Укр. язык">Ua</a>
+                    </li>
+                    <li class="lang-switcher__item">
+                      <a href="#" class="lang-switcher__link" lang="ru" hreflang="ru" title="Рус. язык">Ru</a>
                     </li>
                   </ul>
                 </div>
@@ -146,107 +165,111 @@
       </div>
 
 
-      <main class="main">
+      <main class="main">
         <div class="container  hero">
           <h1 class="visually-hidden">Live English — English for everyone</h1>
 
           <div class="hero__inner">
-            <div class="hero__carousel">
+            <div class="hero__carousel swiper">
 
-              <div class="carousel-cell  hero__item">
-                <div class="row">
+              <div class="swiper-wrapper">
 
-                  <div class="hero__col-text">
-                    <h2 class="title-display hero__title">Корпоративна англійська <span>для вашої компанії</span></h2>
-                    <p class="hero__descr">Live English - профільна школа корпоративних курсів англійської для бізнесу та компаній з 20 років досвіду</p>
-                    <p class="hero__descr-color">(from Elementary to Advanced + preparation for UP)</p>
-                    <div class="hero__controls">
-                      <a href="#" class="btn  btn--icon  hero__link">
-                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#heart-icon"></use></svg>
-                        <span>Go to</span>
-                      </a>
+                <div class="hero__item swiper-slide">
+                  <div class="row">
 
-                      <button class="btn  btn--red  btn--icon" data-toggle="modal" data-target="#trialLessonModal">
-                        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu-board-icon"></use></svg>
-                        <span>Запишитесь на пробный урок</span>
-                      </button>
+                    <div class="hero__col-text">
+                      <h2 class="title-display hero__title">Корпоративна англійська <span>для вашої компанії</span></h2>
+                      <p class="hero__descr">Live English - профільна школа корпоративних курсів англійської для бізнесу та компаній з 20 років досвіду</p>
+                      <p class="hero__descr-color">(from Elementary to Advanced + preparation for UP)</p>
+                      <div class="hero__controls">
+                        <a href="#" class="btn  btn--icon  hero__link">
+                          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#heart-icon"></use></svg>
+                          <span>Go to</span>
+                        </a>
+
+                        <button class="btn  btn--red  btn--icon" data-toggle="modal" data-target="#trialLessonModal">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu-board-icon"></use></svg>
+                          <span>Запишитесь на пробный урок</span>
+                        </button>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="hero__col-img">
-                    <div class="hero__img">
-                      <picture>
-                        <source srcset="img/hero-art.webp" type="image/webp">
-                        <img src="img/hero-art.png" alt="English Courses" width="588" height="492">
-                      </picture>
+                    <div class="hero__col-img">
+                      <div class="hero__img">
+                        <picture>
+                          <source srcset="img/hero-art.webp" type="image/webp">
+                          <img src="img/hero-art.png" alt="English Courses" width="588" height="492">
+                        </picture>
+                      </div>
                     </div>
-                  </div>
 
+                  </div>
                 </div>
-              </div>
 
-              <div class="carousel-cell  hero__item">
-                <div class="row">
+                <div class="hero__item swiper-slide">
+                  <div class="row">
 
-                  <div class="hero__col-text">
-                    <h2 class="title-display hero__title">English Courses <span>Live English</span></h2>
-                    <p class="hero__descr">continue to enroll in groups of all levels</p>
-                    <p class="hero__descr-color">(from Elementary to Advanced + preparation for UP)</p>
-                    <div class="hero__controls">
-                      <a href="#" class="btn  btn--icon  hero__link">
-                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#heart-icon"></use></svg>
-                        <span>Go to</span>
-                      </a>
+                    <div class="hero__col-text">
+                      <h2 class="title-display hero__title">English Courses <span>Live English</span></h2>
+                      <p class="hero__descr">continue to enroll in groups of all levels</p>
+                      <p class="hero__descr-color">(from Elementary to Advanced + preparation for UP)</p>
+                      <div class="hero__controls">
+                        <a href="#" class="btn  btn--icon  hero__link">
+                          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#heart-icon"></use></svg>
+                          <span>Go to</span>
+                        </a>
 
-                      <button class="btn  btn--red  btn--icon" data-toggle="modal" data-target="#trialLessonModal">
-                        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu-board-icon"></use></svg>
-                        <span>Запишитесь на пробный урок</span>
-                      </button>
+                        <button class="btn  btn--red  btn--icon" data-toggle="modal" data-target="#trialLessonModal">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu-board-icon"></use></svg>
+                          <span>Запишитесь на пробный урок</span>
+                        </button>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="hero__col-img">
-                    <div class="hero__img">
-                      <picture>
-                        <source srcset="img/hero-art.webp" type="image/webp">
-                        <img src="img/hero-art.png" alt="English Courses" width="588" height="492">
-                      </picture>
+                    <div class="hero__col-img">
+                      <div class="hero__img">
+                        <picture>
+                          <source srcset="img/hero-art.webp" type="image/webp">
+                          <img src="img/hero-art.png" alt="English Courses" width="588" height="492">
+                        </picture>
+                      </div>
                     </div>
-                  </div>
 
+                  </div>
                 </div>
-              </div>
 
-              <div class="carousel-cell  hero__item">
-                <div class="row">
+                <div class="hero__item swiper-slide">
+                  <div class="row">
 
-                  <div class="hero__col-text">
-                    <h2 class="title-display hero__title">English Courses <span>Live English</span></h2>
-                    <p class="hero__descr">continue to enroll in groups of all levels</p>
-                    <p class="hero__descr-color">(from Elementary to Advanced + preparation for UP)</p>
-                    <div class="hero__controls">
-                      <a href="#" class="btn  btn--icon  hero__link">
-                        <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#heart-icon"></use></svg>
-                        <span>Go to</span>
-                      </a>
+                    <div class="hero__col-text">
+                      <h2 class="title-display hero__title">English Courses <span>Live English</span></h2>
+                      <p class="hero__descr">continue to enroll in groups of all levels</p>
+                      <p class="hero__descr-color">(from Elementary to Advanced + preparation for UP)</p>
+                      <div class="hero__controls">
+                        <a href="#" class="btn  btn--icon  hero__link">
+                          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#heart-icon"></use></svg>
+                          <span>Go to</span>
+                        </a>
 
-                      <button class="btn  btn--red  btn--icon" data-toggle="modal" data-target="#trialLessonModal">
-                        <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu-board-icon"></use></svg>
-                        <span>Запишитесь на пробный урок</span>
-                      </button>
+                        <button class="btn  btn--red  btn--icon" data-toggle="modal" data-target="#trialLessonModal">
+                          <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#menu-board-icon"></use></svg>
+                          <span>Запишитесь на пробный урок</span>
+                        </button>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="hero__col-img">
-                    <div class="hero__img">
-                      <picture>
-                        <source srcset="img/hero-art.webp" type="image/webp">
-                        <img src="img/hero-art.png" alt="English Courses" width="588" height="492">
-                      </picture>
+                    <div class="hero__col-img">
+                      <div class="hero__img">
+                        <picture>
+                          <source srcset="img/hero-art.webp" type="image/webp">
+                          <img src="img/hero-art.png" alt="English Courses" width="588" height="492">
+                        </picture>
+                      </div>
                     </div>
-                  </div>
 
+                  </div>
                 </div>
+
               </div>
 
             </div>
@@ -271,9 +294,8 @@
               </button>
             </div>
 
-
           </div>
-        </div>
+        </div>
 
         <section class="container  consulting">
           <h2 class="visually-hidden">Free consultation</h2>
@@ -347,7 +369,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section>
         <section class="container  features">
           <header class="features__header">
             <h2 class="visually-hidden">Преимущества наших курсов</h2>
@@ -393,7 +415,7 @@
             </div>
 
           </div>
-        </section>
+        </section>
 
         <section class="container  training-programs-card__wrapper">
           <header>
@@ -408,25 +430,29 @@
                   <img src="img/coffee-icon.svg" alt="Description" width="48" height="48" loading="lazy" decoding="async">
                   <h3 class="h5">Comfort Program</h3>
                 </a>
-                <div class="training-programs-card__text">
-                  <p class="training-programs-card__descr">Special Advanced English Course</p>
-                  <p>
-                    <span>Lesson:</span>80 minutes. Group of 4-8 people
-                  </p>
-                  <p>
-                    <span>Training Module:</span>5 weeks
-                  </p>
-                  <p>
-                    <span>Training Schedule:</span>2 times a week
-                  </p>
+                <div class="training-programs-card__text">
+                  <dl class="dotted-list" aria-label="Характеристики">
+                    <div class="dotted-list__item">
+                      <dt class="dotted-list__label">Lesson:</dt>
+                      <dd class="dotted-list__value">80 minutes. Group of 4-8 people</dd>
+                    </div>
+                    <div class="dotted-list__item">
+                      <dt class="dotted-list__label">Training Module:</dt>
+                      <dd class="dotted-list__value">5 weeks</dd>
+                    </div>
+                    <div class="dotted-list__item">
+                      <dt class="dotted-list__label">Training Schedule:</dt>
+                      <dd class="dotted-list__value">2 times a week</dd>
+                    </div>
+                  </dl>
                 </div>
                 <div class="training-programs-card__more">
-                  <p>
-                    <span>Cost:</span>1600 UAH
-                  </p>
+                  <div>
+                    <span>Cost:</span><span class="h5">1600 UAH</span>
+                  </div>
                   <a href="course.html" class="btn  btn--sm"><span>Learn more</span></a>
                 </div>
-                <span class="training-programs-card__badge" style="background-color: rgb(34, 197, 94); box-shadow: -8px 8px 18px -8px rgba(34, 197, 94, 0.3);">Hot</span>
+                <span class="training-programs-card__badge training-programs-card__badge--new">new</span>
               </article>
             </div>
 
@@ -436,25 +462,29 @@
                   <img src="img/bonnet-icon.svg" alt="Description" width="48" height="48" loading="lazy" decoding="async">
                   <h3 class="h5">Индивидуальная программа обучения</h3>
                 </a>
-                <div class="training-programs-card__text">
-                  <p class="training-programs-card__descr">Special Advanced English Course</p>
-                  <p>
-                    <span>Lesson:</span>80 minutes. Group of 4-8 people
-                  </p>
-                  <p>
-                    <span>Training Module:</span>5 weeks
-                  </p>
-                  <p>
-                    <span>Training Schedule:</span>2 times a week
-                  </p>
+                <div class="training-programs-card__text">
+                  <dl class="dotted-list" aria-label="Характеристики">
+                    <div class="dotted-list__item">
+                      <dt class="dotted-list__label">Lesson:</dt>
+                      <dd class="dotted-list__value">80 minutes. Group of 4-8 people</dd>
+                    </div>
+                    <div class="dotted-list__item">
+                      <dt class="dotted-list__label">Training Module:</dt>
+                      <dd class="dotted-list__value">5 weeks</dd>
+                    </div>
+                    <div class="dotted-list__item">
+                      <dt class="dotted-list__label">Training Schedule:</dt>
+                      <dd class="dotted-list__value">2 times a week</dd>
+                    </div>
+                  </dl>
                 </div>
                 <div class="training-programs-card__more">
-                  <p>
-                    <span>Cost:</span>1600 UAH
-                  </p>
+                  <div>
+                    <span>Cost:</span><span class="h5">1600 UAH</span>
+                  </div>
                   <a href="course.html" class="btn  btn--sm"><span>Learn more</span></a>
                 </div>
-                <span class="training-programs-card__badge" style="background-color: rgb(34, 197, 94); box-shadow: -8px 8px 18px -8px rgba(34, 197, 94, 0.3);">Hot</span>
+                <span class="training-programs-card__badge training-programs-card__badge--hot">Hot</span>
               </article>
             </div>
 
@@ -464,25 +494,29 @@
                   <img src="img/briefcase-icon.svg" alt="Description" width="48" height="48" loading="lazy" decoding="async">
                   <h3 class="h5">Dive Program</h3>
                 </a>
-                <div class="training-programs-card__text">
-                  <p class="training-programs-card__descr">Special Advanced English Course</p>
-                  <p>
-                    <span>Lesson:</span>80 minutes. Group of 4-8 people
-                  </p>
-                  <p>
-                    <span>Training Module:</span>5 weeks
-                  </p>
-                  <p>
-                    <span>Training Schedule:</span>2 times a week
-                  </p>
+                <div class="training-programs-card__text">
+                  <dl class="dotted-list" aria-label="Характеристики">
+                    <div class="dotted-list__item">
+                      <dt class="dotted-list__label">Lesson:</dt>
+                      <dd class="dotted-list__value">80 minutes. Group of 4-8 people</dd>
+                    </div>
+                    <div class="dotted-list__item">
+                      <dt class="dotted-list__label">Training Module:</dt>
+                      <dd class="dotted-list__value">5 weeks</dd>
+                    </div>
+                    <div class="dotted-list__item">
+                      <dt class="dotted-list__label">Training Schedule:</dt>
+                      <dd class="dotted-list__value">2 times a week</dd>
+                    </div>
+                  </dl>
                 </div>
                 <div class="training-programs-card__more">
-                  <p>
-                    <span>Cost:</span>1600 UAH
-                  </p>
+                  <div>
+                    <span>Cost:</span><span class="h5">1600 UAH</span>
+                  </div>
                   <a href="course.html" class="btn  btn--sm"><span>Learn more</span></a>
                 </div>
-                <span class="training-programs-card__badge" style="background-color: rgb(34, 197, 94); box-shadow: -8px 8px 18px -8px rgba(34, 197, 94, 0.3);">Hot</span>
+                <span class="training-programs-card__badge training-programs-card__badge--descount">20%</span>
               </article>
             </div>
 
@@ -492,25 +526,29 @@
                   <img src="img/corporate-icon.svg" alt="Description" width="48" height="48" loading="lazy" decoding="async">
                   <h3 class="h5">Corporate English</h3>
                 </a>
-                <div class="training-programs-card__text">
-                  <p class="training-programs-card__descr">Special Advanced English Course</p>
-                  <p>
-                    <span>Lesson:</span>80 minutes. Group of 4-8 people
-                  </p>
-                  <p>
-                    <span>Training Module:</span>5 weeks
-                  </p>
-                  <p>
-                    <span>Training Schedule:</span>2 times a week
-                  </p>
+                <div class="training-programs-card__text">
+                  <dl class="dotted-list" aria-label="Характеристики">
+                    <div class="dotted-list__item">
+                      <dt class="dotted-list__label">Lesson:</dt>
+                      <dd class="dotted-list__value">80 minutes. Group of 4-8 people</dd>
+                    </div>
+                    <div class="dotted-list__item">
+                      <dt class="dotted-list__label">Training Module:</dt>
+                      <dd class="dotted-list__value">5 weeks</dd>
+                    </div>
+                    <div class="dotted-list__item">
+                      <dt class="dotted-list__label">Training Schedule:</dt>
+                      <dd class="dotted-list__value">2 times a week</dd>
+                    </div>
+                  </dl>
                 </div>
                 <div class="training-programs-card__more">
-                  <p>
-                    <span>Cost:</span>1600 UAH
-                  </p>
+                  <div>
+                    <span>Cost:</span><span class="h5">1600 UAH</span>
+                  </div>
                   <a href="course.html" class="btn  btn--sm"><span>Learn more</span></a>
                 </div>
-                <span class="training-programs-card__badge" style="background-color: rgb(34, 197, 94); box-shadow: -8px 8px 18px -8px rgba(34, 197, 94, 0.3);">Hot</span>
+                <span class="training-programs-card__badge training-programs-card__badge--label">Hot</span>
               </article>
             </div>
 
@@ -601,7 +639,7 @@
             </div>
           </article>
 
-        </div>
+        </div>
 
         <section class="container  steps"
           style="background-image: url('/img/ease-step-bg.webp')"
@@ -679,290 +717,474 @@
           </div>
 
           <div class="row teachers__row" role="list">
-            <div class="teachers__col">
+            <div class="teachers__col">
 
               <div class="teacher-card" role="listitem">
-                <div class="embed-responsive embed-responsive--1-1  teacher-card__photo">
-                  <picture>
-                    <!-- <source srcset="img/svitlana.webp,
-                                    img/svitlana.webp 2x" type="image/webp"> -->
-                      <!-- 128x128, 256x256 2x -->
-                    <img src="img/svitlana.png"
-                         srcset="img/svitlana.png,
-                                 img/svitlana.png 2x"
-                         alt="Name" width="128" height="128" loading="lazy">
-                  </picture>
-                </div>
-                <div class="teacher-card__text">
+                <div class="teacher-card__header">
+                  <div class="embed-responsive embed-responsive--1-1  teacher-card__photo">
+                    <picture>
+                        <!-- <source srcset="img/svitlana.webp,
+                                        img/svitlana.webp 2x" type="image/webp"> -->
+                          <!-- 128x128, 256x256 2x -->
+                        <img src="img/svitlana.png"
+                            srcset="img/svitlana.png,
+                                    img/svitlana.png 2x"
+                            alt="Name" width="128" height="128" loading="lazy">
+                      </picture>
+                    </div>
+                    <p class="teacher-card__name"><span class="h5">Марина</span><br><span>(Україна)</span></p>
+                    <a href="#" class="teacher-card__link">
+                      <svg width="10" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-down-icon"></use></svg>
+                    </a>
+                  </div>
+                <!-- <div class="teacher-card__text">
                   <p class="teacher-card__char  teacher-card__char--name">Марина <span>(Україна)</span></p>
                   <p class="teacher-card__char">Сертифікати: <span>CELTA</span></p>
                   <p class="teacher-card__char">Досвід: <span>9 років</span></p>
                   <p class="teacher-card__char">Диплом: <span>Магістр філології</span></p>
-                </div>
+                </div> -->
+                <dl class="dotted-list" aria-label="Характеристики">
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Lesson:</dt>
+                    <dd class="dotted-list__value">80 minutes. Group of 4-8 people</dd>
+                  </div>
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Training Module:</dt>
+                    <dd class="dotted-list__value">5 weeks</dd>
+                  </div>
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Training Schedule:</dt>
+                    <dd class="dotted-list__value">2 times a week</dd>
+                  </div>
+                </dl>
               </div>
 
             </div>
 
-            <div class="teachers__col">
+            <div class="teachers__col">
 
               <div class="teacher-card" role="listitem">
-                <div class="embed-responsive embed-responsive--1-1  teacher-card__photo">
-                  <picture>
-                    <!-- <source srcset="img/svitlana.webp,
-                                    img/svitlana.webp 2x" type="image/webp"> -->
-                      <!-- 128x128, 256x256 2x -->
-                    <img src="img/svitlana.png"
-                         srcset="img/svitlana.png,
-                                 img/svitlana.png 2x"
-                         alt="Name" width="128" height="128" loading="lazy">
-                  </picture>
-                </div>
-                <div class="teacher-card__text">
+                <div class="teacher-card__header">
+                  <div class="embed-responsive embed-responsive--1-1  teacher-card__photo">
+                    <picture>
+                        <!-- <source srcset="img/svitlana.webp,
+                                        img/svitlana.webp 2x" type="image/webp"> -->
+                          <!-- 128x128, 256x256 2x -->
+                        <img src="img/svitlana.png"
+                            srcset="img/svitlana.png,
+                                    img/svitlana.png 2x"
+                            alt="Name" width="128" height="128" loading="lazy">
+                      </picture>
+                    </div>
+                    <p class="teacher-card__name"><span class="h5">Марина</span><br><span>(Україна)</span></p>
+                    <a href="#" class="teacher-card__link">
+                      <svg width="10" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-down-icon"></use></svg>
+                    </a>
+                  </div>
+                <!-- <div class="teacher-card__text">
                   <p class="teacher-card__char  teacher-card__char--name">Марина <span>(Україна)</span></p>
                   <p class="teacher-card__char">Сертифікати: <span>CELTA</span></p>
                   <p class="teacher-card__char">Досвід: <span>9 років</span></p>
                   <p class="teacher-card__char">Диплом: <span>Магістр філології</span></p>
-                </div>
+                </div> -->
+                <dl class="dotted-list" aria-label="Характеристики">
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Lesson:</dt>
+                    <dd class="dotted-list__value">80 minutes. Group of 4-8 people</dd>
+                  </div>
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Training Module:</dt>
+                    <dd class="dotted-list__value">5 weeks</dd>
+                  </div>
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Training Schedule:</dt>
+                    <dd class="dotted-list__value">2 times a week</dd>
+                  </div>
+                </dl>
               </div>
 
             </div>
 
-            <div class="teachers__col">
+            <div class="teachers__col">
 
               <div class="teacher-card" role="listitem">
-                <div class="embed-responsive embed-responsive--1-1  teacher-card__photo">
-                  <picture>
-                    <!-- <source srcset="img/svitlana.webp,
-                                    img/svitlana.webp 2x" type="image/webp"> -->
-                      <!-- 128x128, 256x256 2x -->
-                    <img src="img/svitlana.png"
-                         srcset="img/svitlana.png,
-                                 img/svitlana.png 2x"
-                         alt="Name" width="128" height="128" loading="lazy">
-                  </picture>
-                </div>
-                <div class="teacher-card__text">
+                <div class="teacher-card__header">
+                  <div class="embed-responsive embed-responsive--1-1  teacher-card__photo">
+                    <picture>
+                        <!-- <source srcset="img/svitlana.webp,
+                                        img/svitlana.webp 2x" type="image/webp"> -->
+                          <!-- 128x128, 256x256 2x -->
+                        <img src="img/svitlana.png"
+                            srcset="img/svitlana.png,
+                                    img/svitlana.png 2x"
+                            alt="Name" width="128" height="128" loading="lazy">
+                      </picture>
+                    </div>
+                    <p class="teacher-card__name"><span class="h5">Марина</span><br><span>(Україна)</span></p>
+                    <a href="#" class="teacher-card__link">
+                      <svg width="10" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-down-icon"></use></svg>
+                    </a>
+                  </div>
+                <!-- <div class="teacher-card__text">
                   <p class="teacher-card__char  teacher-card__char--name">Марина <span>(Україна)</span></p>
                   <p class="teacher-card__char">Сертифікати: <span>CELTA</span></p>
                   <p class="teacher-card__char">Досвід: <span>9 років</span></p>
                   <p class="teacher-card__char">Диплом: <span>Магістр філології</span></p>
-                </div>
+                </div> -->
+                <dl class="dotted-list" aria-label="Характеристики">
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Lesson:</dt>
+                    <dd class="dotted-list__value">80 minutes. Group of 4-8 people</dd>
+                  </div>
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Training Module:</dt>
+                    <dd class="dotted-list__value">5 weeks</dd>
+                  </div>
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Training Schedule:</dt>
+                    <dd class="dotted-list__value">2 times a week</dd>
+                  </div>
+                </dl>
               </div>
 
             </div>
 
-            <div class="teachers__col">
+            <div class="teachers__col">
 
               <div class="teacher-card" role="listitem">
-                <div class="embed-responsive embed-responsive--1-1  teacher-card__photo">
-                  <picture>
-                    <!-- <source srcset="img/svitlana.webp,
-                                    img/svitlana.webp 2x" type="image/webp"> -->
-                      <!-- 128x128, 256x256 2x -->
-                    <img src="img/svitlana.png"
-                         srcset="img/svitlana.png,
-                                 img/svitlana.png 2x"
-                         alt="Name" width="128" height="128" loading="lazy">
-                  </picture>
-                </div>
-                <div class="teacher-card__text">
+                <div class="teacher-card__header">
+                  <div class="embed-responsive embed-responsive--1-1  teacher-card__photo">
+                    <picture>
+                        <!-- <source srcset="img/svitlana.webp,
+                                        img/svitlana.webp 2x" type="image/webp"> -->
+                          <!-- 128x128, 256x256 2x -->
+                        <img src="img/svitlana.png"
+                            srcset="img/svitlana.png,
+                                    img/svitlana.png 2x"
+                            alt="Name" width="128" height="128" loading="lazy">
+                      </picture>
+                    </div>
+                    <p class="teacher-card__name"><span class="h5">Марина</span><br><span>(Україна)</span></p>
+                    <a href="#" class="teacher-card__link">
+                      <svg width="10" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-down-icon"></use></svg>
+                    </a>
+                  </div>
+                <!-- <div class="teacher-card__text">
                   <p class="teacher-card__char  teacher-card__char--name">Марина <span>(Україна)</span></p>
                   <p class="teacher-card__char">Сертифікати: <span>CELTA</span></p>
                   <p class="teacher-card__char">Досвід: <span>9 років</span></p>
                   <p class="teacher-card__char">Диплом: <span>Магістр філології</span></p>
-                </div>
+                </div> -->
+                <dl class="dotted-list" aria-label="Характеристики">
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Lesson:</dt>
+                    <dd class="dotted-list__value">80 minutes. Group of 4-8 people</dd>
+                  </div>
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Training Module:</dt>
+                    <dd class="dotted-list__value">5 weeks</dd>
+                  </div>
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Training Schedule:</dt>
+                    <dd class="dotted-list__value">2 times a week</dd>
+                  </div>
+                </dl>
               </div>
 
             </div>
 
-            <div class="teachers__col">
+            <div class="teachers__col">
 
               <div class="teacher-card" role="listitem">
-                <div class="embed-responsive embed-responsive--1-1  teacher-card__photo">
-                  <picture>
-                    <!-- <source srcset="img/svitlana.webp,
-                                    img/svitlana.webp 2x" type="image/webp"> -->
-                      <!-- 128x128, 256x256 2x -->
-                    <img src="img/svitlana.png"
-                         srcset="img/svitlana.png,
-                                 img/svitlana.png 2x"
-                         alt="Name" width="128" height="128" loading="lazy">
-                  </picture>
-                </div>
-                <div class="teacher-card__text">
+                <div class="teacher-card__header">
+                  <div class="embed-responsive embed-responsive--1-1  teacher-card__photo">
+                    <picture>
+                        <!-- <source srcset="img/svitlana.webp,
+                                        img/svitlana.webp 2x" type="image/webp"> -->
+                          <!-- 128x128, 256x256 2x -->
+                        <img src="img/svitlana.png"
+                            srcset="img/svitlana.png,
+                                    img/svitlana.png 2x"
+                            alt="Name" width="128" height="128" loading="lazy">
+                      </picture>
+                    </div>
+                    <p class="teacher-card__name"><span class="h5">Марина</span><br><span>(Україна)</span></p>
+                    <a href="#" class="teacher-card__link">
+                      <svg width="10" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-down-icon"></use></svg>
+                    </a>
+                  </div>
+                <!-- <div class="teacher-card__text">
                   <p class="teacher-card__char  teacher-card__char--name">Марина <span>(Україна)</span></p>
                   <p class="teacher-card__char">Сертифікати: <span>CELTA</span></p>
                   <p class="teacher-card__char">Досвід: <span>9 років</span></p>
                   <p class="teacher-card__char">Диплом: <span>Магістр філології</span></p>
-                </div>
+                </div> -->
+                <dl class="dotted-list" aria-label="Характеристики">
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Lesson:</dt>
+                    <dd class="dotted-list__value">80 minutes. Group of 4-8 people</dd>
+                  </div>
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Training Module:</dt>
+                    <dd class="dotted-list__value">5 weeks</dd>
+                  </div>
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Training Schedule:</dt>
+                    <dd class="dotted-list__value">2 times a week</dd>
+                  </div>
+                </dl>
               </div>
 
             </div>
 
-            <div class="teachers__col">
+            <div class="teachers__col">
 
               <div class="teacher-card" role="listitem">
-                <div class="embed-responsive embed-responsive--1-1  teacher-card__photo">
-                  <picture>
-                    <!-- <source srcset="img/svitlana.webp,
-                                    img/svitlana.webp 2x" type="image/webp"> -->
-                      <!-- 128x128, 256x256 2x -->
-                    <img src="img/svitlana.png"
-                         srcset="img/svitlana.png,
-                                 img/svitlana.png 2x"
-                         alt="Name" width="128" height="128" loading="lazy">
-                  </picture>
-                </div>
-                <div class="teacher-card__text">
+                <div class="teacher-card__header">
+                  <div class="embed-responsive embed-responsive--1-1  teacher-card__photo">
+                    <picture>
+                        <!-- <source srcset="img/svitlana.webp,
+                                        img/svitlana.webp 2x" type="image/webp"> -->
+                          <!-- 128x128, 256x256 2x -->
+                        <img src="img/svitlana.png"
+                            srcset="img/svitlana.png,
+                                    img/svitlana.png 2x"
+                            alt="Name" width="128" height="128" loading="lazy">
+                      </picture>
+                    </div>
+                    <p class="teacher-card__name"><span class="h5">Марина</span><br><span>(Україна)</span></p>
+                    <a href="#" class="teacher-card__link">
+                      <svg width="10" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-down-icon"></use></svg>
+                    </a>
+                  </div>
+                <!-- <div class="teacher-card__text">
                   <p class="teacher-card__char  teacher-card__char--name">Марина <span>(Україна)</span></p>
                   <p class="teacher-card__char">Сертифікати: <span>CELTA</span></p>
                   <p class="teacher-card__char">Досвід: <span>9 років</span></p>
                   <p class="teacher-card__char">Диплом: <span>Магістр філології</span></p>
-                </div>
+                </div> -->
+                <dl class="dotted-list" aria-label="Характеристики">
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Lesson:</dt>
+                    <dd class="dotted-list__value">80 minutes. Group of 4-8 people</dd>
+                  </div>
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Training Module:</dt>
+                    <dd class="dotted-list__value">5 weeks</dd>
+                  </div>
+                  <div class="dotted-list__item">
+                    <dt class="dotted-list__label">Training Schedule:</dt>
+                    <dd class="dotted-list__value">2 times a week</dd>
+                  </div>
+                </dl>
               </div>
 
             </div>
 
-            <div class="training-programs-card__col-link  teachers__link-wrapper">
+            <!-- <div class="training-programs-card__col-link  teachers__link-wrapper">
               <a href="#" class="btn btn--red"><span>Усі викладачі</span></a>
-            </div>
+            </div> -->
           </div>
 
-        </section>
+        </section>
 
         <section class="container  reviews-slider">
           <p class="h2 reviews-slider__title">What our Students are Saying</p>
           <h2 class="visually-hidden">Отзывы студентов об обучении</h2>
           <div class="row">
-            <div class="reviews-slider__inner">
+            <div class="reviews-slider__inner swiper">
 
-              <article class="carousel-cell  review-card">
-                <h3 class="visually-hidden">Отзыв пользователя Katerina Paereli</h3>
-                <div class="row">
+              <div class="swiper-wrapper">
 
-                  <div class="review-card__img-col">
-                    <figure class="review-card__figure">
-                      <div class="embed-responsive  embed-responsive--4-3  review-card__img">
-                        <picture class="carousel-cell-image">
-                          <source data-flickity-lazyload-srcset="img/portret.webp" media="(min-width: 1280px)" type="image/webp">
-                          <source data-flickity-lazyload-srcset="img/portret.jpg" media="(min-width: 1280px)">
-                            <!-- 384x288  десктоп -->
-                          <source data-flickity-lazyload-srcset="img/portret.webp" media="(min-width: 320px)" type="image/webp">
-                          <source data-flickity-lazyload-srcset="img/portret.jpg" media="(min-width: 320px)">
-                            <!-- 92x69  мобила-планшет -->
-                          <source data-flickity-lazyload-srcset="img/portret.webp" type="image/webp">
-                          <img data-flickity-lazyload-src="img/portret.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="420" height="315">
-                        </picture>
+                <article class="review-card swiper-slide">
+                  <h3 class="visually-hidden">Отзыв пользователя Katerina Paereli</h3>
+                  <div class="row">
+
+                    <div class="review-card__img-col">
+                      <div class="review-card__figure">
+                        <div class="embed-responsive  embed-responsive--1-1  review-card__img">
+                          <picture>
+                            <source srcset="img/portret.webp" media="(min-width: 1280px)" type="image/webp">
+                            <source srcset="img/portret.jpg" media="(min-width: 1280px)">
+                              <!-- 384x288  десктоп -->
+                            <source srcset="img/portret.webp" media="(min-width: 320px)" type="image/webp">
+                            <source srcset="img/portret.jpg" media="(min-width: 320px)">
+                              <!-- 92x69  мобила-планшет -->
+                            <source srcset="img/portret.webp" type="image/webp">
+                            <img src="img/portret.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="420" height="315" loading="lazy">
+                          </picture>
+                        </div>
                       </div>
-                      <figcaption class="h5  review-card__fig-caption">Katerina Paereli <span>Head of Marketing</span></figcaption>
-                    </figure>
-                  </div>
-
-                  <div class="review-card__text-col">
-                    <div class="review-card__text">
-                      <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
-                      <p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>
-                      <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
                     </div>
-                  </div>
-
-                </div>
-              </article>
-
-              <article class="carousel-cell  review-card">
-                <h3 class="visually-hidden">Отзыв пользователя Katerina Paereli</h3>
-                <div class="row">
-
-                  <div class="review-card__img-col">
-                    <figure class="review-card__figure">
-                      <div class="embed-responsive  embed-responsive--4-3  review-card__img">
-                        <picture class="carousel-cell-image">
-                          <source data-flickity-lazyload-srcset="img/portret-1-3.webp" media="(min-width: 1280px)" type="image/webp">
-                          <source data-flickity-lazyload-srcset="img/portret-1-3.jpg" media="(min-width: 1280px)">
-                            <!-- 384x288  десктоп -->
-                          <source data-flickity-lazyload-srcset="img/portret-1-3.webp" media="(min-width: 320px)" type="image/webp">
-                          <source data-flickity-lazyload-srcset="img/portret-1-3.jpg" media="(min-width: 320px)">
-                            <!-- 92x69  мобила-планшет -->
-                          <source data-flickity-lazyload-srcset="img/portret-1-3.webp" type="image/webp">
-                          <img data-flickity-lazyload-src="img/portret-1-3.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="420" height="315">
-                        </picture>
+                    <div class="review-card__text-col">
+                      <div class="h5  review-card__fig-caption">Katerina Paereli <span>Head of Marketing</span></div>
+                      <div class="review-card__text">
+                        <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
+                        <p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>
+                        <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
                       </div>
-                      <figcaption class="h5  review-card__fig-caption">
-                        Katerina Paereli <span>Head of Marketing</span>
-                      </figcaption>
-                    </figure>
-                  </div>
-
-                  <div class="review-card__text-col">
-                    <div class="review-card__text">
-                      <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
-                      <p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>
                     </div>
+
                   </div>
+                </article>
 
-                </div>
-              </article>
+                <article class="review-card swiper-slide">
+                  <h3 class="visually-hidden">Отзыв пользователя Katerina Paereli</h3>
+                  <div class="row">
 
-              <article class="carousel-cell  review-card">
-                <h3 class="visually-hidden">Отзыв пользователя Katerina Paereli</h3>
-                <div class="row">
-
-                  <div class="review-card__img-col">
-                    <figure class="review-card__figure">
-                      <div class="embed-responsive  embed-responsive--4-3  review-card__img">
-                        <picture class="carousel-cell-image">
-                          <source data-flickity-lazyload-srcset="img/portret-2-3.webp" media="(min-width: 1280px)" type="image/webp">
-                          <source data-flickity-lazyload-srcset="img/portret-2-3.jpg" media="(min-width: 1280px)">
-                            <!-- 384x288  десктоп -->
-                          <source data-flickity-lazyload-srcset="img/portret-2-3.webp" media="(min-width: 320px)" type="image/webp">
-                          <source data-flickity-lazyload-srcset="img/portret-2-3.jpg" media="(min-width: 320px)">
-                            <!-- 92x69  мобила-планшет -->
-                          <source data-flickity-lazyload-srcset="img/portret-2-3.webp" type="image/webp">
-                          <img data-flickity-lazyload-src="img/portret-2-3.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="420" height="315">
-                        </picture>
+                    <div class="review-card__img-col">
+                      <div class="review-card__figure">
+                        <div class="embed-responsive  embed-responsive--1-1  review-card__img">
+                          <picture>
+                            <source srcset="img/portret.webp" media="(min-width: 1280px)" type="image/webp">
+                            <source srcset="img/portret.jpg" media="(min-width: 1280px)">
+                              <!-- 384x288  десктоп -->
+                            <source srcset="img/portret.webp" media="(min-width: 320px)" type="image/webp">
+                            <source srcset="img/portret.jpg" media="(min-width: 320px)">
+                              <!-- 92x69  мобила-планшет -->
+                            <source srcset="img/portret.webp" type="image/webp">
+                            <img src="img/portret.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="420" height="315" loading="lazy">
+                          </picture>
+                        </div>
                       </div>
-                      <figcaption class="h5  review-card__fig-caption">
-                        Katerina Paereli <span>Head of Marketing</span>
-                      </figcaption>
-                    </figure>
-                  </div>
-
-                  <div class="review-card__text-col">
-                    <div class="review-card__text">
-                      <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
-                      <p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>
                     </div>
+
+                    <div class="review-card__text-col">
+                      <div class="h5  review-card__fig-caption">Katerina Paereli <span>Head of Marketing</span></div>
+                      <div class="review-card__text">
+                        <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
+                        <p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>
+                      </div>
+                    </div>
+
                   </div>
+                </article>
 
-                </div>
-              </article>
+                <article class="review-card swiper-slide">
+                  <h3 class="visually-hidden">Отзыв пользователя Katerina Paereli</h3>
+                  <div class="row">
+
+                    <div class="review-card__img-col">
+                      <div class="review-card__figure">
+                        <div class="embed-responsive  embed-responsive--1-1  review-card__img">
+                          <picture>
+                            <source srcset="img/portret-2-3.webp" media="(min-width: 1280px)" type="image/webp">
+                            <source srcset="img/portret-2-3.jpg" media="(min-width: 1280px)">
+                              <!-- 384x288  десктоп -->
+                            <source srcset="img/portret-2-3.webp" media="(min-width: 320px)" type="image/webp">
+                            <source srcset="img/portret-2-3.jpg" media="(min-width: 320px)">
+                              <!-- 92x69  мобила-планшет -->
+                            <source srcset="img/portret-2-3.webp" type="image/webp">
+                            <img src="img/portret-2-3.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="420" height="315" loading="lazy">
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="review-card__text-col">
+                      <div class="h5  review-card__fig-caption">Katerina Paereli <span>Head of Marketing</span></div>
+                      <div class="review-card__text">
+                        <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
+                        <p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </article>
+
+                <article class="review-card swiper-slide">
+                  <h3 class="visually-hidden">Отзыв пользователя Katerina Paereli</h3>
+                  <div class="row">
+
+                    <div class="review-card__img-col">
+                      <div class="review-card__figure">
+                        <div class="embed-responsive  embed-responsive--1-1  review-card__img">
+                          <picture>
+                            <source srcset="img/portret-1-3.webp" media="(min-width: 1280px)" type="image/webp">
+                            <source srcset="img/portret-1-3.jpg" media="(min-width: 1280px)">
+                              <!-- 384x288  десктоп -->
+                            <source srcset="img/portret-1-3.webp" media="(min-width: 320px)" type="image/webp">
+                            <source srcset="img/portret-1-3.jpg" media="(min-width: 320px)">
+                              <!-- 92x69  мобила-планшет -->
+                            <source srcset="img/portret-1-3.webp" type="image/webp">
+                            <img src="img/portret-1-3.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="420" height="315" loading="lazy">
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="review-card__text-col">
+                      <div class="h5  review-card__fig-caption">Katerina Paereli <span>Head of Marketing</span></div>
+                      <div class="review-card__text">
+                        <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
+                        <p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </article>
+
+                <article class="review-card swiper-slide">
+                  <h3 class="visually-hidden">Отзыв пользователя Katerina Paereli</h3>
+                  <div class="row">
+
+                    <div class="review-card__img-col">
+                      <div class="review-card__figure">
+                        <div class="embed-responsive  embed-responsive--1-1  review-card__img">
+                          <picture>
+                            <source srcset="img/portret-2-3.webp" media="(min-width: 1280px)" type="image/webp">
+                            <source srcset="img/portret-2-3.jpg" media="(min-width: 1280px)">
+                              <!-- 384x288  десктоп -->
+                            <source srcset="img/portret-2-3.webp" media="(min-width: 320px)" type="image/webp">
+                            <source srcset="img/portret-2-3.jpg" media="(min-width: 320px)">
+                              <!-- 92x69  мобила-планшет -->
+                            <source srcset="img/portret-2-3.webp" type="image/webp">
+                            <img src="img/portret-2-3.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="420" height="315" loading="lazy">
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="review-card__text-col">
+                      <div class="h5  review-card__fig-caption">Katerina Paereli <span>Head of Marketing</span></div>
+                      <div class="review-card__text">
+                        <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>
+                        <p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>
+                      </div>
+                    </div>
+
+                  </div>
+                </article>
 
 
+
+              </div>
 
             </div>
           </div>
 
-            <div class="slider-nav">
-              <button class="button  slider-nav__btn  slider-nav__btn--prev">
-                <span class="visually-hidden">Previous slide</span>
+            <nav class="slider-nav-number" aria-label="Навигация по слайдам">
+              <button class="button slider-nav-number__btn slider-nav-number__btn--prev" type="button" aria-label="Предыдущий слайд">
+                <svg width="10" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-down-icon"></use></svg>
               </button>
-              <div class="slider-nav__pagination">
-                <button class="button  slider-nav__dot  is-selected">
-                  <span class="visually-hidden">Slide 1</span>
+
+              <div class="slider-nav-number__pagination">
+                <button type="button" class="button  slider-nav-number__dot  is-selected" aria-current="true">
+                  <span class="visually-hidden">Slide </span>1
                 </button>
-                <button class="button  slider-nav__dot">
-                  <span class="visually-hidden">Slide 2</span>
+                <button type="button" class="button  slider-nav-number__dot">
+                  <span class="visually-hidden">Slide </span>2
                 </button>
-                <button class="button  slider-nav__dot">
-                  <span class="visually-hidden">Slide 3</span>
+                <button type="button" class="button  slider-nav-number__dot">
+                  <span class="visually-hidden">Slide </span>3
                 </button>
               </div>
-              <button class="button  slider-nav__btn  slider-nav__btn--next">
-                <span class="visually-hidden">Next slide</span>
-              </button>
-            </div>
 
-        </section>
+              <button class="button slider-nav-number__btn slider-nav-number__btn--next" type="button" aria-label="Следующий слайд">
+                <svg width="10" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#arrow-down-icon"></use></svg>
+              </button>
+            </nav>
+        </section>
 
         <section class="container  blog-card__wrapper">
           <h2 class="blog-card__title">Recent Publications</h2>
@@ -1365,7 +1587,7 @@
 
           </div>
 
-          <div class="page-footer__copyrights-col">
+          <div class="page-footer__copyrights-col">
             <div class="copyrights">
               <div class="row">
 
@@ -1582,7 +1804,7 @@
   </div>
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
-  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
 
 
 </body>

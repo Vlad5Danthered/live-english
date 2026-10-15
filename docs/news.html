@@ -37,7 +37,7 @@
     }
   </style>
 
-  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <link href="css/style.css" rel="stylesheet" media="screen">
 
 </head>
 
@@ -118,7 +118,7 @@
                   </li>
                 </ul>
 
-                <div class="lang-switcher">
+                <!--<div class="lang-switcher">
                   <ul class="list-nostyled  lang-switcher__list">
                     <li class="lang-switcher__item  active">
                       <a class="lang-switcher__link" title="Укр. язык"><span>Ua</span></a>
@@ -128,6 +128,25 @@
                     </li>
                     <li class="lang-switcher__item">
                       <a href="#" class="lang-switcher__link" title="Англ. язык"><span>En</span></a>
+                    </li>
+                  </ul>
+                </div>-->
+                <div class="lang-switcher" data-lang-switcher>
+                  <button class="lang-switcher__toggle" type="button"
+                          aria-haspopup="true" aria-expanded="false" aria-controls="lang-list"
+                          title="Англ. язык">
+                    <span class="lang-switcher__current">En</span>
+                    <svg class="lang-switcher__icon" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+                      <path d="M2 4.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+
+                  <ul class="list-nostyled  lang-switcher__list" id="lang-list">
+                    <li class="lang-switcher__item">
+                      <a href="#" class="lang-switcher__link" lang="uk" hreflang="uk" title="Укр. язык">Ua</a>
+                    </li>
+                    <li class="lang-switcher__item">
+                      <a href="#" class="lang-switcher__link" lang="ru" hreflang="ru" title="Рус. язык">Ru</a>
                     </li>
                   </ul>
                 </div>
@@ -553,7 +572,7 @@
 
           </div>
 
-          <div class="page-footer__copyrights-col">
+          <div class="page-footer__copyrights-col">
             <div class="copyrights">
               <div class="row">
 
@@ -769,7 +788,7 @@
   </div>
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
-  <script src="js/script.min.js"></script>
+  <script src="js/script.js"></script>
 
 
 </body>
