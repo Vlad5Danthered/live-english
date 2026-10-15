@@ -2,12 +2,42 @@
   padding-top: 64px;
   padding-bottom: 64px;
 
+  $block-name:                &; // #{$block-name}__element
+
+  &--faq {
+    background-color: $section-bg;
+    
+    & #{$block-name}__col {
+      @include col(xl, 12);
+      @include col-offset(xl, 0);
+      @include col(md, 10);
+      @include col-offset(md, 1)
+    }
+  }
+
+  &__header {
+    margin-bottom: 24px;
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+      text-align: initial;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    & + p {
+      margin: 0;
+      margin-top: 8px;
+      color: $text-muted;
+    }
+  }
+
   @media (min-width: $screen-xl) {
     padding-top: 88px;
     padding-bottom: 88px;
   }
-
-  $block-name:                &; // #{$block-name}__element
 
   &__col {
     @include col(xs, 12);
