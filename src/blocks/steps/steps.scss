@@ -9,7 +9,7 @@
   @media (min-width: $screen-md) {
     background-size: 1380px;
     //background-repeat: no-repeat;
-    background-position: center top 64px;
+    background-position: center bottom 145px;
     background-image: url(../img/ease-step-bg.png) !important;
   }
 
@@ -18,7 +18,7 @@
     padding-bottom: 88px;
     background-size: 1920px;
     //background-repeat: no-repeat;
-    background-position: center top -26px;
+    background-position: center top 40px;
     //background-image: url(../img/ease-step-bg.png);
   }
 
@@ -70,6 +70,17 @@
       display: block;
       margin: 0 auto;
     }
+
+    @media (max-width: $screen-md - 1) {
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center bottom 0px;
+      background-image: url(../img/ease-step-bg.png) !important;
+      padding-bottom: 6px;
+    }
+    @media (max-width: 420px) {
+      background-size: 500px;
+    }
   }
 
   &__card-text {
@@ -85,6 +96,10 @@
       &:focus {
         color: $secondary-color--active;
       }
+    }
+
+    @media (max-width: $screen-md - 1) {
+      padding-top: 18px;
     }
   }
 }
