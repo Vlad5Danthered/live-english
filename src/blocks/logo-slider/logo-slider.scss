@@ -1,6 +1,14 @@
 .logo-slider {
   margin-bottom: 32px;
   // height: 96px;
+  &__inner {
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 
   @media (min-width: $screen-xl) {
     margin-bottom: 40px;
@@ -23,11 +31,16 @@
   &__img {
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     img {
-       width: 100%;
-       height: 100%;
-       object-fit: contain;
+      display: block;
+      margin: auto;
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
     }
   }
 }

@@ -146,11 +146,11 @@
     & > div {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 2px;
 
-      @media (max-width: 360px - 1) {
-        flex-direction: column;
-        gap: 2px;
-        align-items: start;
+      @media (min-width: $screen-md) {
+        gap: 4px;
       }
 
       & span {

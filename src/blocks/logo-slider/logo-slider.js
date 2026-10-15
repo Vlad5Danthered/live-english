@@ -13,7 +13,7 @@
 }());*/
 
 (function(){
-  const elem = document.querySelector('.logo-slider');
+  const elem = document.querySelector('.logo-slider__inner');
   if (!elem) { return; }
   
   const swiper = new Swiper(elem, {
