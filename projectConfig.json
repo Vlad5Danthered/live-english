@@ -62,7 +62,8 @@
     "teachers": [],
     "teacher-card": [],
     "fetchit": [],
-    "dotted-list": []
+    "dotted-list": [],
+    "cta": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
