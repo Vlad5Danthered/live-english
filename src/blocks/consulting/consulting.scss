@@ -24,6 +24,10 @@
 
   &__row {
     gap: 40px 0;
+    
+    @media (min-width: $screen-xl) {
+      justify-content: space-between;
+    }
   }
 
   &__col {
@@ -31,7 +35,7 @@
     @include col-offset(md, 1);
     @include col(md, 10);
     @include col-offset(xl, 0);
-    @include col(xl, 6);
+    @include col(xl, 5.75);
 
     & > * {
 
@@ -47,7 +51,7 @@
 
     @media (min-width: $screen-xl) {
       display: flex;
-      flex-direction: center;
+      // flex-direction: center;
       justify-content: center;
     }
   }
@@ -136,14 +140,14 @@
 
     span:first-child {
       display: block;
-      margin-bottom: 8px;
-      font-size: $font-size--h4;
+      margin-bottom: 4px;
     }
   }
 
   &__advisor-position {
     font-size: $font-size-sm;
-    font-weight: 600;
+    font-weight: 400;
+    color: $text-muted;
   }
 
   &__advisor-tel {

@@ -129,6 +129,10 @@
     background-color: $section-bg;
     border: none;
 
+    h2 {
+      margin-bottom: 20px;
+    }
+
     @media (min-width: $screen-md) {
       padding: 40px;
       border-radius: $border-radius * 2;

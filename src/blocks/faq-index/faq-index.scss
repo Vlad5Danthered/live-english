@@ -11,7 +11,12 @@
 
   .messenger-links {
 
-    .messenger-links__item + .messenger-links__item {
+    .messenger-links__link {
+      width: 48px;
+      height: 48px;
+    }
+
+    /*.messenger-links__item + .messenger-links__item {
       margin-left: 5px;
 
       @media (min-width: $screen-lg) {
@@ -21,36 +26,36 @@
       @media (min-width: $screen-xl) {
         margin-left: 7px;
       }
-    }
+    }*/
   }
 
   &__contacts-col {
     @include col(xs, 12);
-    @include col-offset(md, 2);
-    @include col(md, 8);
+    @include col-offset(md, 1);
+    @include col(md, 10);
     @include col-offset(xl, 0);
-    @include col(xl, 5);
+    @include col(xl, 6);
     margin-bottom: 32px;
 
     @media (min-width: $screen-xl) {
-      margin-bottom: 40px;
+      margin-bottom: 48px;
     }
   }
 
   &__accordion-col {
     @include col(xs, 12);
-    @include col-offset(md, 2);
-    @include col(md, 8);
+    @include col-offset(md, 1);
+    @include col(md, 10);
     @include col-offset(xl, 1);
-    @include col(xl, 6);
+    @include col(xl, 5);
   }
 
   &__header {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     text-align: center;
 
     @media (min-width: $screen-xl) {
-      margin-bottom: 40px;
+      margin-bottom: 24px;
       text-align: initial;
     }
   }
@@ -67,27 +72,35 @@
   &__contact-list {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 
     @media (min-width: $screen-md) {
       justify-content: space-between;
     }
 
     @media (min-width: $screen-xl) {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
   }
 
   &__contact-item {
     flex: 1 1;
     flex-basis: 100%;
-    padding: 24px;
+    padding: 12px;
     border: 1px solid $border-color;
-    border-radius: $border-radius;
+    border-radius: $border-radius-m;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @media (min-width: $screen-md) {
-      flex: 0 1;
-      flex-basis: calc(50% - 12px);
+      // flex: 0 1;
+      // flex-basis: calc(50% - 12px);
+      padding: 24px;
+      @include col(xs, 12);
+      @include col(md, 5.75);
     }
 
     & + & {
@@ -100,10 +113,17 @@
 
     p {
       font-size: $font-size-sm;
+      margin-bottom: 8px;
+      text-align: center;
+      color: $text-muted;
 
       &:not(:first-child) {
         margin-top: 3px;
       }
+    }
+
+    & .messenger-links {
+      margin-bottom: 12px;
     }
   }
 
@@ -113,8 +133,10 @@
       display: inline-block;
       vertical-align: top;
       content: "";
-      width: 40px;
-      height: 40px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: $section-bg;
       background-position: center;
       background-repeat: no-repeat;
       background-size: 24px 25px;
@@ -123,7 +145,7 @@
 
     span {
       display: block;
-      margin-top: 6px;
+      margin-top: 8px;
     }
   }
 
@@ -132,26 +154,32 @@
     align-items: center;
     font-weight: 600;
 
+    &:not(&--go) {
+      font-size: $font-size--h5;
+      line-height: $line-height-120;
+    }
+    
     &--go {
-      color: $secondary-color;
+      color: $main-color;
+      padding: 6px 0;
 
       &::after {
         content: "";
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         margin-left: 8px;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 18px;
-        background-image: svg-load('../blocks/sprite-svg/svg/arrow-right-icon.svg', fill=$secondary-color);
+        background-size: 24px;
+        background-image: svg-load('../blocks/sprite-svg/svg/arrow-right-icon2.svg', fill=$main-color);
       }
 
       &:hover,
       &:focus {
-        color: $secondary-color--active;
+        color: $main-color--active;
 
         &::after {
-          background-image: svg-load('../blocks/sprite-svg/svg/arrow-right-icon.svg', fill=$secondary-color--active);
+          background-image: svg-load('../blocks/sprite-svg/svg/arrow-right-icon2.svg', fill=$main-color--active);
         }
       }
     }
