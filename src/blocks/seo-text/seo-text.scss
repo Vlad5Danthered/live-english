@@ -8,25 +8,26 @@
     background-color: $section-bg;
     
     & #{$block-name}__col {
-      @include col(xl, 12);
-      @include col-offset(xl, 0);
       @include col(md, 10);
-      @include col-offset(md, 1)
+      @include col-offset(md, 1);
+    }
+
+    & #{$block-name}__title {
+      margin: 0;
     }
   }
 
   &__header {
     margin-bottom: 24px;
-    text-align: center;
+    /*text-align: center;
 
     @media (min-width: $screen-xl) {
       margin-bottom: 40px;
       text-align: initial;
-    }
+    }*/
   }
 
   &__title {
-    margin: 0;
     & + p {
       margin: 0;
       margin-top: 8px;
@@ -41,10 +42,12 @@
 
   &__col {
     @include col(xs, 12);
-    @include col-offset(md, 2);
-    @include col(md, 8);
-    @include col-offset(xl, 0);
-    @include col(xl, 8);
+    @include col(md, 10);
+    @include col-offset(md, 1);
+    // @include col-offset(md, 2);
+    // @include col(md, 8);
+    // @include col-offset(xl, 0);
+    // @include col(xl, 8);
 
     &--no-index {
       @include col(xs, 12);
