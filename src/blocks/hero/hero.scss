@@ -88,7 +88,9 @@
     @include col(md, 8);
     @include col-offset(xl, 0);
     @include col(xl, 6);
+  }
 
+  &:not(&--section) &__col-img {
     @media (max-width: $screen-xl - 1) {
       order: -1;
       margin-bottom: 16px;

@@ -5,6 +5,17 @@
   display: block;
   margin-bottom: 20px;
 
+  &__container {
+    &.row{
+      //            XS | SM | MD | LG | XL  | XXL;
+      @include row (0px, 0px, 0px, 0px, 20px, 20px );
+    }
+
+    & > * {
+      @include col($screen: xl, $column: 6, $columns: 12, $gutter: 20px);
+    }
+  }
+
   &__name {
     @include field-name;
   }

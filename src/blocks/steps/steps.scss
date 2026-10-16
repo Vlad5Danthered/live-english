@@ -46,6 +46,10 @@
     color: $text-muted;
   }
 
+  & > .row {
+    @include row (20px, 20px, 20px, 20px, 20px, 20px );
+  }
+
   &__col {
     // @include col(xs, 12);
     // @include col(md, 6);

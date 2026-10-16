@@ -1,0 +1,146 @@
+.available-vacancies {
+  padding-top: 64px;
+  padding-bottom: 64px;
+
+  @media (min-width: $screen-xl) {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  & .faq-block {
+    &__card {
+      box-shadow: $shadow;
+
+      &-btn {
+        padding-right: 16px;
+        & span:first-child {
+          margin-right: 68px;
+        }
+        &-descr:not(:first-child) {
+          font-size: $font-size;
+          font-weight: 400;
+          margin-top: 16px;
+          display: block;
+          
+          @media (min-width: $screen-md) {
+            margin-top: 20px;
+          }
+        }
+
+        &::after {
+          top: 16px;
+          transform: translateY(0);
+        }
+
+        &[aria-expanded=true] {
+          &::after {
+            transform: translateY(0) rotate(180deg);
+          }
+        }
+      }
+    }
+    
+    &__vacancies {
+      border: 1px solid $border-color;
+      padding: 16px;
+      border-radius: $border-radius-m;
+      strong {
+        color: $text-color;
+        font-weight: 600;
+        font-size: $font-size;
+      }
+      ul {
+        margin-top: 0;
+      }
+
+      &-info {
+        padding: 12px;
+        border-radius: $border-radius;
+        background-color: $section-bg;
+
+        h5{
+          margin: 0;
+          color: $text-color;
+        }
+
+        p {
+          margin-top: 6px;
+
+          &:not(:last-child) {
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+  
+  &__header {
+    flex-direction: column;
+    * {
+      @include col(md, 8);
+      @include col(xl, 6);
+    }
+
+    p {
+      color: $text-muted;
+      font-size: $font-size-m-l;
+      line-height: $line-height-140;
+      margin-top: 0;
+
+
+      @media (min-width: $screen-md) {
+        font-size: $font-size-l;
+      }
+    }
+    margin-bottom: 40px;
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 24px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__title, p {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__inner {
+    gap: 24px 0;
+
+    & > * {
+      @include col(xl, 6)
+    }
+    @media (max-width: $screen-xl - 1) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__link-block {
+    padding: 40px 32px;
+    height: 160px;
+    border-radius: $border-radius-l;
+    background-color: $section-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--work {
+      background-color: #00A1F1;
+    }
+    &--robota {
+      background-color: #FF5251;
+    }
+  }
+
+}

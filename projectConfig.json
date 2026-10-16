@@ -10,6 +10,7 @@
     "field-radio": [],
     "field-checkbox": [],
     "field-text": [],
+    "field-file": [],
     "form": [],
     "logo": [],
     "main-nav": [],
@@ -26,6 +27,7 @@
     "typo": [],
     "lang-switcher": [],
     "hero": [],
+    "hero-section": [],
     "features": [],
     "training-programs-card": [],
     "steps": [],
@@ -63,7 +65,8 @@
     "teacher-card": [],
     "fetchit": [],
     "dotted-list": [],
-    "cta": []
+    "cta": [],
+    "available-vacancies": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

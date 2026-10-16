@@ -1,0 +1,48 @@
+.hero--section {
+  $block-hero: ".hero";
+  $block-name:                &; // #{$block-name}__element
+
+  & #{$block-hero}__title {
+    font-size: $font-size-m--h1;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size--h1;
+    }
+  }
+
+  & #{$block-hero}__col-img,
+  & #{$block-hero}__col-text {
+    @include col(xl, 6);
+    @include col(xs, 12);
+  }
+
+  & #{$block-hero}__col-text {
+    @include col-offset(xl, 0);
+    @include col-offset(md, 0);
+    
+    @media (max-width: $screen-md - 1) {
+      text-align: inherit;
+    }
+  }
+
+  & #{$block-hero}__col-img {
+    @include col-offset(xl, 0);
+    @include col-offset(md, 0);
+  }
+
+
+  & #{$block-hero}__item {
+    padding: 0;
+  }
+
+  & #{$block-hero}__descr {
+    font-size: $font-size-m-l;
+    font-weight: 400;
+    margin-top: 12px;
+    margin-bottom: 0;
+
+    @media (min-width: $screen-md) {
+      font-size: $font-size-l;
+    }
+  }
+}
