@@ -125,4 +125,11 @@
   &__help-text {
     @include field-help-text;
   }
+
+  &__input-wrap--error {
+
+    #{$block-name}__help-text {
+      color: $color-danger;
+    }
+  }
 }

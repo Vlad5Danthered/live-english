@@ -84,4 +84,15 @@
   &__help-text {
     @include field-help-text;
   }
+
+  &--error {
+
+    #{$block-name}__help-text {
+      color: $color-danger;
+    }
+
+    #{$block-name}__input {
+      box-shadow: 0 0 0 1px $color-danger;
+    }
+  }
 }

@@ -65,13 +65,8 @@
 
   // Error state
   &--error {
-    #{$block-name}__name {
-      color: $color-danger;
-    }
-
     #{$block-name}__area {
       border-color: $color-danger;
-      background-color: lighten($color-danger, 35%);
     }
 
     #{$block-name}__help-text {
