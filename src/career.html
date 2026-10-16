@@ -27,7 +27,7 @@
           "addClass": "features--bg-blue"
         })
 
-        <div class="container available-vacancies">
+        <section class="container available-vacancies">
           <div class="available-vacancies__header row">
             <h2 class="available-vacancies__title">Відкриті вакансії</h2>
             <p>Ми цінуємо інновації, креативність та професіоналізм, тому відправляйте резюме навіть коли не бачите відкритої ваканісії - ми залюьки розглянемо Вашу кандидатуру.</p>
@@ -187,18 +187,18 @@
                     </label>
                   </div>
 
-                  <label class="field-text">
+                  <label class="field-text field-required">
                     <span class="field-text__name">Email</span>
                     <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="email" name="email" value="">
+                      <input class="field-text__input" type="email" name="email" value="" required>
                       <span class="field-text__help-text  error-email"></span>
                     </span>
                   </label>
 
-                  <label class="field-text">
+                  <label class="field-text field-required">
                     <span class="field-text__name">Phone / Telegram</span>
                     <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="text" name="tel-telegram" value="" placeholder="+380...or @username">
+                      <input class="field-text__input" type="text" name="tel-telegram" value="" placeholder="+380...or @username" required>
                       <span class="field-text__help-text  error-tel-telegram"></span>
                     </span>
                   </label>
@@ -206,7 +206,7 @@
                   <div class="field-file field-required">
                     <span class="field-file__name ">CV</span>
                     <label class="field-file__area" for="cv-upload">
-                      <input class="field-file__input visually-hidden" type="file" id="cv-upload" name="cv" accept=".pdf,.docx,.doc">
+                      <input class="field-file__input visually-hidden" type="file" id="cv-upload" name="cv" accept=".pdf,.docx,.doc" required>
                       <span class="field-file__icon" aria-hidden="true" style="display: block;">
                         <svg width="24" height="24"><use xlink:href="img/sprite-svg.svg#upload"></use></svg>
                       </span>
@@ -234,7 +234,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </section>
 
       </main>
 

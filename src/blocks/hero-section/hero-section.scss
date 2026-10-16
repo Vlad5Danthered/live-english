@@ -35,7 +35,7 @@
     padding: 0;
   }
 
-  & #{$block-hero}__descr {
+  & #{$block-hero}__descr p {
     font-size: $font-size-m-l;
     font-weight: 400;
     margin-top: 12px;
