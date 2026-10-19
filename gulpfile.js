@@ -419,8 +419,8 @@ gulp.task('js', function (callback) {
         }
       }))
       .pipe(babel())
-      .pipe(concat('script.js'))
-      //.pipe(gulpIf(!isDev, uglify().on('error', function(e){console.log(e);})))
+      .pipe(concat('script.min.js'))
+      .pipe(uglify().on('error', function(e){console.log(e);}))
       .pipe(size({
         title: 'Размер',
         showFiles: true,
