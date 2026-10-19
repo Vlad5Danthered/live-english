@@ -166,72 +166,74 @@
               </div>
             </div>
             <div class="available-vacancies__aside">
-              <section class="trial-lesson-form" style="margin-bottom: 0;">
-                <h2 class="trial-lesson-form__title">Відправити резюме</h2>
+              <div class="course__aside">
+                <section class="trial-lesson-form" style="margin-bottom: 0;">
+                  <h2 class="trial-lesson-form__title">Відправити резюме</h2>
 
-                <form class="trial-lesson-form__form" action="" method="post">
-                  <div class="field-text__container row">
-                    <label class="field-text">
-                      <span class="field-text__name">First Name</span>
+                  <form class="trial-lesson-form__form" action="" method="post">
+                    <div class="field-text__container row">
+                      <label class="field-text">
+                        <span class="field-text__name">First Name</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" name="first-name" value="">
+                          <span class="field-text__help-text  error-first-name"></span>
+                        </span>
+                      </label>
+                      <label class="field-text">
+                        <span class="field-text__name">Last Name</span>
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" name="last-name" value="">
+                          <span class="field-text__help-text  error-last-name"></span>
+                        </span>
+                      </label>
+                    </div>
+
+                    <label class="field-text field-required">
+                      <span class="field-text__name">Email</span>
                       <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" name="first-name" value="">
-                        <span class="field-text__help-text  error-first-name"></span>
+                        <input class="field-text__input" type="email" name="email" value="" required>
+                        <span class="field-text__help-text  error-email"></span>
                       </span>
                     </label>
-                    <label class="field-text">
-                      <span class="field-text__name">Last Name</span>
+
+                    <label class="field-text field-required">
+                      <span class="field-text__name">Phone / Telegram</span>
                       <span class="field-text__input-wrap">
-                        <input class="field-text__input" type="text" name="last-name" value="">
-                        <span class="field-text__help-text  error-last-name"></span>
+                        <input class="field-text__input" type="text" name="tel-telegram" value="" placeholder="+380...or @username" required>
+                        <span class="field-text__help-text  error-tel-telegram"></span>
                       </span>
                     </label>
-                  </div>
 
-                  <label class="field-text field-required">
-                    <span class="field-text__name">Email</span>
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="email" name="email" value="" required>
-                      <span class="field-text__help-text  error-email"></span>
-                    </span>
-                  </label>
+                    <div class="field-file field-required">
+                      <span class="field-file__name ">CV</span>
+                      <label class="field-file__area" for="cv-upload">
+                        <input class="field-file__input visually-hidden" type="file" id="cv-upload" name="cv" accept=".pdf,.docx,.doc" required>
+                        <span class="field-file__icon" aria-hidden="true" style="display: block;">
+                          <svg width="24" height="24"><use xlink:href="img/sprite-svg.svg#upload"></use></svg>
+                        </span>
+                        <span class="field-file__text">
+                          <span class="field-file__text-link">Click to upload CV</span>, PDF, DOCX (max 10MB)
+                        </span>
+                      </label>
+                      <span class="field-file__help-text"></span>
+                    </div>
 
-                  <label class="field-text field-required">
-                    <span class="field-text__name">Phone / Telegram</span>
-                    <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="text" name="tel-telegram" value="" placeholder="+380...or @username" required>
-                      <span class="field-text__help-text  error-tel-telegram"></span>
-                    </span>
-                  </label>
+                    <div class="field-actions  trial-lesson-form__actions">
+                      <!-- <div class="field-actions__text">* — обязательные поля</div> -->
+                      <button class="btn  trial-lesson-form__submit" type="submit">Submit</button>
+                    </div>
+                  </form>
+                </section>
 
-                  <div class="field-file field-required">
-                    <span class="field-file__name ">CV</span>
-                    <label class="field-file__area" for="cv-upload">
-                      <input class="field-file__input visually-hidden" type="file" id="cv-upload" name="cv" accept=".pdf,.docx,.doc" required>
-                      <span class="field-file__icon" aria-hidden="true" style="display: block;">
-                        <svg width="24" height="24"><use xlink:href="img/sprite-svg.svg#upload"></use></svg>
-                      </span>
-                      <span class="field-file__text">
-                        <span class="field-file__text-link">Click to upload CV</span>, PDF, DOCX (max 10MB)
-                      </span>
-                    </label>
-                    <span class="field-file__help-text"></span>
-                  </div>
-
-                  <div class="field-actions  trial-lesson-form__actions">
-                    <!-- <div class="field-actions__text">* — обязательные поля</div> -->
-                    <button class="btn  trial-lesson-form__submit" type="submit">Submit</button>
-                  </div>
-                </form>
-              </section>
-
-              <a href="https://work.ua" class="available-vacancies__link-block available-vacancies__link-block--work" target="_blank" rel="nofollow noopener">
-                <img src="../img/work-ua.png" alt="work ua logo" aria-hidden="true">
-                <span class="visually-hidden">Work.ua</span>
-              </a>
-              <a href="https://robota.ua" class="available-vacancies__link-block available-vacancies__link-block--robota" target="_blank" rel="nofollow noopener">
-                <img src="../img/robota-ua.png" alt="robota ua logo" aria-hidden="true">
-                <span class="visually-hidden">Robota.ua</span>
-              </a>
+                <a href="https://work.ua" class="available-vacancies__link-block available-vacancies__link-block--work" target="_blank" rel="nofollow noopener">
+                  <img src="../img/work-ua.png" alt="work ua logo" aria-hidden="true">
+                  <span class="visually-hidden">Work.ua</span>
+                </a>
+                <a href="https://robota.ua" class="available-vacancies__link-block available-vacancies__link-block--robota" target="_blank" rel="nofollow noopener">
+                  <img src="../img/robota-ua.png" alt="robota ua logo" aria-hidden="true">
+                  <span class="visually-hidden">Robota.ua</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>

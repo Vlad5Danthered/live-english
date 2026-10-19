@@ -2,6 +2,10 @@
   padding-top: 64px;
   padding-bottom: 64px;
 
+  &:first-child {
+    padding-top: 0;
+  }
+
   @media (min-width: $screen-xl) {
     padding-top: 88px;
     padding-bottom: 88px;

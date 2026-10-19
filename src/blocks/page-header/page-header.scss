@@ -38,6 +38,11 @@
     @media (min-width: $screen-xl) {
       text-align: initial;
     }
+
+    @media (max-width: $screen-md - 1) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__main-col {

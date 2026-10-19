@@ -120,7 +120,7 @@
     }
   }
 
-  &__aside {
+  &__aside > .course__aside {
     display: flex;
     flex-direction: column;
     gap: 20px;
